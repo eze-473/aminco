@@ -1,0 +1,145 @@
+
+
+/*preguntados*/
+#wheel {
+    #ruleta {
+        width: 300px;
+        height: 300px;
+        border: 10px solid #000;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+    #ruleta img {
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transition: transform 4s ease-out;
+    }
+    #pregunta {
+        margin-top: 20px;
+    }
+}
+/*h1{
+    color: #007BFF;
+}
+.pregunta {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+#quiz-container {
+    background: rgb(201, 201, 201);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer {
+    margin: 5px 0;
+    padding: 10px;
+    background: #007BFF;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer:hover {
+    background: #000000;
+} */
+/*ahrocado*/
+.ahorcadito {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#ahorcado {
+    border: 1px solid #000000;
+    margin: 20px auto;
+}
+
+#palabra {
+    font-size: 24px;
+    letter-spacing: 10px;
+}
+/*romepcavesas*/
+#puzzle {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+}
+.piece {
+    width: 100px;
+    height: 100px;
+    background-size: 400px 400px; /* Ajusta según el tamaño total de tu imagen */
+    cursor: pointer;
+}
+/*memoria*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 400px;
+    margin: auto;
+}
+.card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+}
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: red;
+}
+.card-back {
+    transform: rotateY(180deg);
+}
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio sin distorsionarse */
+}
+/*luces*/
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.image-container img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+.highlight {
+    opacity: 1 !important;
+}
+.disabled {
+    pointer-events: none;
+}
