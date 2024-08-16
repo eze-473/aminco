@@ -1,24 +1,41 @@
 
 
 /*preguntados*/
-#wheel {
-    #ruleta {
-        width: 300px;
-        height: 300px;
-        border: 10px solid #000;
-        border-radius: 50%;
-        position: relative;
-        overflow: hidden;
-    }
-    #ruleta img {
-        width: 100%;
-        height: 100%;
-        transform-origin: center;
-        transition: transform 4s ease-out;
-    }
-    #pregunta {
-        margin-top: 20px;
-    }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+.flecha {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid red;
+}
+
+#pregunta {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 /*h1{
     color: #007BFF;
