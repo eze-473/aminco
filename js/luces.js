@@ -44,7 +44,7 @@ function checkPattern() {
             setTimeout(playPattern, 1000);
         } else {
             errors++;
-            if (errors === 3) {
+            if (errors === 1) {
                 alert('Perdiste. Inténtalo de nuevo.');
                 errors = 0;
             }

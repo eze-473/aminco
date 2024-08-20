@@ -35,21 +35,21 @@ function dibujarAhorcado() {
     ctx.stroke();
 
     // Dibujar la cabeza
-    if (errores > 4) {
+    if (errores > 0) {
         ctx.beginPath();
         ctx.arc(150, 50, 20, 0, Math.PI * 2);
         ctx.stroke();
     }
 
     // Dibujar el cuerpo
-    if (errores > 5) {
+    if (errores > 1) {
         ctx.moveTo(150, 70);
         ctx.lineTo(150, 130);
         ctx.stroke();
     }
 
     // Dibujar los brazos
-    if (errores > 6) {
+    if (errores > 2) {
         ctx.moveTo(150, 90);
         ctx.lineTo(130, 110);
         ctx.stroke();
@@ -59,7 +59,7 @@ function dibujarAhorcado() {
     }
 
     // Dibujar las piernas
-    if (errores > 7) {
+    if (errores > 3) {
         ctx.moveTo(150, 130);
         ctx.lineTo(130, 160);
         ctx.stroke();
@@ -85,7 +85,7 @@ function adivinarLetra() {
     document.getElementById("letra").value = "";
     if (!palabraOculta.includes("_")) {
         alert("¡Ganaste!");
-    } else if (errores >= 8) {
+    } else if (errores >= 4) {
         alert("¡Perdiste! La palabra era " + palabra);
     }
 }

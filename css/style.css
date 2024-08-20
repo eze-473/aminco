@@ -1,41 +1,8 @@
 
 
 /*preguntados*/
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-}
-
-.container {
-    position: relative;
-    text-align: center;
-}
-
 canvas {
-    border: 2px solid #000;
-    border-radius: 50%;
-}
-
-.flecha {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 30px solid red;
-}
-
-#pregunta {
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
+    border: 1px solid black;
 }
 /*h1{
     color: #007BFF;
