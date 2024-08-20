@@ -44,7 +44,7 @@ function drawRoulette() {
 function animateRoulette() {
     if (speed > 0) {
         rotationAngle += speed;
-        speed *= 0.97; // Reduce speed gradually
+        speed *= 0.99; // Reduce speed more slowly
         drawRoulette();
         requestAnimationFrame(animateRoulette);
     } else {
@@ -59,12 +59,10 @@ function selectOption() {
     alert(`La opción seleccionada es: ${selectedIndex + 1}`);
 }
 
-canvas.addEventListener('click', () => {
-    if (!isSpinning) {
-        speed = 0.3; // Initial speed
-        isSpinning = true;
-        animateRoulette();
-    }
+document.getElementById('spinButton').addEventListener('click', () => {
+    speed = 1.5; // Higher initial speed
+    isSpinning = true;
+    animateRoulette();
 });
 
-drawRoulette(); // Draw the roulette initially
+drawRoulette(); 

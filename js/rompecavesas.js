@@ -46,7 +46,7 @@ function checkWin() {
 }
 
 // Agregar cronómetro de 30 segundos
-let timeLeft = 30;
+let timeLeft = 45;
 const timerDisplay = document.createElement('div');
 timerDisplay.id = 'timer';
 timerDisplay.textContent = `Tiempo restante: ${timeLeft} segundos`;
