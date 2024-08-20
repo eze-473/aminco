@@ -8,6 +8,8 @@ const images = [
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
+let errorCount = 0;
+const maxErrors = 3;
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -77,6 +79,11 @@ function unflipCards() {
         firstCard.classList.remove('flipped');
         secondCard.classList.remove('flipped');
         resetBoard();
+        errorCount++;
+        if (errorCount >= maxErrors) {
+            alert('¡Perdiste!');
+            resetGame();
+        }
     }, 1500);
 }
 
@@ -92,6 +99,13 @@ function checkWin() {
             alert('¡Ganaste!');
         }, 500);
     }
+}
+
+function resetGame() {
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
+    errorCount = 0;
+    createBoard();
 }
 
 createBoard();

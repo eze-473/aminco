@@ -1,5 +1,6 @@
 const puzzle = document.getElementById('puzzle');
 const pieces = Array.from({ length: 16 }, (_, i) => i + 1).sort(() => Math.random() - 0.5);
+let timer;
 
 pieces.forEach((piece, index) => {
     const div = document.createElement('div');
@@ -39,6 +40,23 @@ function checkWin() {
     const currentOrder = Array.from(puzzle.children).map(piece => parseInt(piece.dataset.index));
     const correctOrder = Array.from({ length: 16 }, (_, i) => i);
     if (currentOrder.every((pos, index) => pos === correctOrder[index])) {
+        clearInterval(timer);
         alert('¡Ganaste!');
     }
 }
+
+// Agregar cronómetro de 30 segundos
+let timeLeft = 30;
+const timerDisplay = document.createElement('div');
+timerDisplay.id = 'timer';
+timerDisplay.textContent = `Tiempo restante: ${timeLeft} segundos`;
+document.body.appendChild(timerDisplay);
+
+timer = setInterval(() => {
+    timeLeft--;
+    timerDisplay.textContent = `Tiempo restante: ${timeLeft} segundos`;
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+        alert('¡Perdiste!');
+    }
+}, 1000);

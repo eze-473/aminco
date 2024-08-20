@@ -2,6 +2,7 @@ const images = document.querySelectorAll('.image-container img');
 let pattern = [];
 let userPattern = [];
 let level = 0;
+let errors = 0;
 
 function highlightImage(img) {
     img.classList.add('highlight');
@@ -11,11 +12,8 @@ function highlightImage(img) {
 }
 
 function generatePattern() {
-    pattern = [];
-    for (let i = 0; i < level + 1; i++) {
-        const randomIndex = Math.floor(Math.random() * images.length);
-        pattern.push(images[randomIndex]);
-    }
+    const randomIndex = Math.floor(Math.random() * images.length);
+    pattern.push(images[randomIndex]);
 }
 
 function playPattern() {
@@ -35,17 +33,24 @@ function checkPattern() {
     if (userPattern.length === pattern.length) {
         if (userPattern.every((img, index) => img === pattern[index])) {
             level++;
+            errors = 0; // Reset errors on correct pattern
             if (level === 8) {
                 alert('¡Ganaste!');
                 level = 0;
+                pattern = [];
             }
             userPattern = [];
             generatePattern();
             setTimeout(playPattern, 1000);
         } else {
-            alert('Perdiste. Inténtalo de nuevo.');
+            errors++;
+            if (errors === 3) {
+                alert('Perdiste. Inténtalo de nuevo.');
+                errors = 0;
+            }
             userPattern = [];
             level = 0;
+            pattern = [];
             generatePattern();
             setTimeout(playPattern, 1000);
         }

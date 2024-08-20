@@ -3,13 +3,6 @@ let palabra = palabras[Math.floor(Math.random() * palabras.length)];
 let palabraOculta = Array(palabra.length).fill("_");
 let errores = 0;
 
-/*function dibujarAhorcado() {
-    const canvas = document.getElementById("ahorcado");
-    const ctx = canvas.getContext("2d");
-    // Dibujar partes del ahorcado según los errores
-    // Ejemplo: ctx.moveTo(10, 10); ctx.lineTo(10, 100); ctx.stroke();
-}
-*/
 function actualizarPalabra() {
     document.getElementById("palabra").innerText = palabraOculta.join(" ");
 }
@@ -22,32 +15,24 @@ function dibujarAhorcado() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Dibujar la base del ahorcado
-    if (errores > 0) {
-        ctx.moveTo(10, 190);
-        ctx.lineTo(190, 190);
-        ctx.stroke();
-    }
+    ctx.moveTo(10, 190);
+    ctx.lineTo(190, 190);
+    ctx.stroke();
 
     // Dibujar el poste vertical
-    if (errores > 1) {
-        ctx.moveTo(50, 190);
-        ctx.lineTo(50, 10);
-        ctx.stroke();
-    }
+    ctx.moveTo(50, 190);
+    ctx.lineTo(50, 10);
+    ctx.stroke();
 
     // Dibujar el poste horizontal
-    if (errores > 2) {
-        ctx.moveTo(50, 10);
-        ctx.lineTo(150, 10);
-        ctx.stroke();
-    }
+    ctx.moveTo(50, 10);
+    ctx.lineTo(150, 10);
+    ctx.stroke();
 
     // Dibujar la cuerda
-    if (errores > 3) {
-        ctx.moveTo(150, 10);
-        ctx.lineTo(150, 30);
-        ctx.stroke();
-    }
+    ctx.moveTo(150, 10);
+    ctx.lineTo(150, 30);
+    ctx.stroke();
 
     // Dibujar la cabeza
     if (errores > 4) {
@@ -83,6 +68,7 @@ function dibujarAhorcado() {
         ctx.stroke();
     }
 }
+
 function adivinarLetra() {
     const letra = document.getElementById("letra").value;
     if (palabra.includes(letra)) {
@@ -105,3 +91,4 @@ function adivinarLetra() {
 }
 
 actualizarPalabra();
+dibujarAhorcado();
