@@ -70,6 +70,10 @@ button:hover {
     letter-spacing: 10px;
 }
 /*romepcavesas*/
+.fondo{
+    background-color:#032b3b;
+    color: #fff;
+}
 #puzzle {
     display: grid;
     grid-template-columns: repeat(4, 100px);
@@ -84,6 +88,9 @@ button:hover {
   }
 
 /*memoria*/
+.fondo{
+    background-color: #3081bf;
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -129,6 +136,9 @@ button:hover {
 
 
 /*luces*/
+.textocoor{
+    color: #032b3b;
+}
 .image-container {
     display: flex;
     justify-content: space-around;

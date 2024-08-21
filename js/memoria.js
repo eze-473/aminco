@@ -44,7 +44,7 @@ function showAllCards() {
     cards.forEach(card => card.classList.add('flipped'));
     setTimeout(() => {
         cards.forEach(card => card.classList.remove('flipped'));
-    }, 3000);
+    }, 8000);
 }
 
 function flipCard() {
@@ -83,7 +83,7 @@ function unflipCards() {
         errorCount++;
         if (errorCount >= maxErrors) {
             alert('¡Perdiste!');
-            resetGame();
+            window.location.href = '../index.html'; // Redirigir a otra página
         }
     }, 1500);
 }

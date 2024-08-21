@@ -46,6 +46,7 @@ function checkPattern() {
             errors++;
             if (errors === 1) {
                 alert('Perdiste. Inténtalo de nuevo.');
+                window.location.href = '../index.html'; // Redirigir a otra página
                 errors = 0;
             }
             userPattern = [];
