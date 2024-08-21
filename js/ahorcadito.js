@@ -15,6 +15,7 @@ function dibujarAhorcado() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Dibujar la base del ahorcado
+    ctx.beginPath();
     ctx.moveTo(10, 190);
     ctx.lineTo(190, 190);
     ctx.stroke();
@@ -41,41 +42,49 @@ function dibujarAhorcado() {
         ctx.stroke();
     }
 
-    // Dibujar el torso
+    // Dibujar la soga
     if (errores > 1) {
+        ctx.moveTo(150, 30);
+        ctx.lineTo(150, 50);
+        ctx.stroke();
+    }
+
+    // Dibujar el torso
+    if (errores > 2) {
         ctx.moveTo(150, 70);
         ctx.lineTo(150, 130);
         ctx.stroke();
     }
 
     // Dibujar una mano
-    if (errores > 2) {
+    if (errores > 3) {
         ctx.moveTo(150, 90);
         ctx.lineTo(130, 110);
         ctx.stroke();
     }
 
     // Dibujar la otra mano
-    if (errores > 3) {
+    if (errores > 4) {
         ctx.moveTo(150, 90);
         ctx.lineTo(170, 110);
         ctx.stroke();
     }
 
     // Dibujar un pie
-    if (errores > 4) {
+    if (errores > 5) {
         ctx.moveTo(150, 130);
         ctx.lineTo(130, 160);
         ctx.stroke();
     }
 
     // Dibujar el otro pie
-    if (errores > 5) {
+    if (errores > 6) {
         ctx.moveTo(150, 130);
         ctx.lineTo(170, 160);
         ctx.stroke();
     }
 }
+
 
 function adivinarLetra() {
     const letra = document.getElementById("letra").value;
@@ -93,7 +102,7 @@ function adivinarLetra() {
     document.getElementById("letra").value = "";
     if (!palabraOculta.includes("_")) {
         alert("¡Ganaste!");
-    } else if (errores >= 6) {
+    } else if (errores >= 7) { // Una vida más
         alert("¡Perdiste! La palabra era " + palabra);
     }
 }

@@ -2,10 +2,24 @@ const puzzle = document.getElementById('puzzle');
 const pieces = Array.from({ length: 16 }, (_, i) => i + 1).sort(() => Math.random() - 0.5);
 let timer;
 
+// Lista de imágenes
+const images = [
+    "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/CAMIONETA AMINCO.jpg",
+  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS//Topografía descripción de servicios.jpg",
+  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Direccion tecnica de perforaciones portada.jpg",
+  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Geotecnia descripción de servicios.jpg",
+  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/MONTAÑAS.jpg",
+  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Social descripcion de servicios.jpeg",
+  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Topografia portada.jpg"
+];
+
+// Seleccionar una imagen al azar
+const selectedImage = images[Math.floor(Math.random() * images.length)];
+
 pieces.forEach((piece, index) => {
     const div = document.createElement('div');
     div.className = 'piece';
-    div.style.backgroundImage = 'url("../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/CAMIONETA AMINCO.jpg")'; // Reemplaza con la ruta de tu imagen
+    div.style.backgroundImage = `url("${selectedImage}")`; // Usar la imagen seleccionada
     div.style.backgroundPosition = `${-100 * ((piece - 1) % 4)}px ${-100 * Math.floor((piece - 1) / 4)}px`;
     div.dataset.index = piece - 1; // Guardar el índice correcto
     div.draggable = true;
@@ -45,7 +59,7 @@ function checkWin() {
     }
 }
 
-// Agregar cronómetro de 30 segundos
+// Agregar cronómetro de 45 segundos
 let timeLeft = 45;
 const timerDisplay = document.createElement('div');
 timerDisplay.id = 'timer';
