@@ -1,41 +1,46 @@
 const questions = [
     {
-        question: "¿Cuál es la capital de Francia?",
-        answers: ["París", "Londres", "Madrid", "Berlín"],
-        correct: "París"
+        question: "¿Cuál es la capital de Argentina?",
+        options: ["Córdoba", "Rosario", "Buenos Aires", "Mendoza"],
+        correct: 2
     },
     {
-        question: "¿Cuál es el planeta más grande del sistema solar?",
-        answers: ["Tierra", "Marte", "Júpiter", "Saturno"],
-        correct: "Júpiter"
+        question: "¿Cuál es el río más largo del mundo?",
+        options: ["Nilo", "Amazonas", "Yangtsé", "Misisipi"],
+        correct: 1
+    },
+    {
+        question: "¿Quién pintó la Mona Lisa?",
+        options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+        correct: 2
     }
 ];
 
-let currentQuestionIndex = 0;
-
 function loadQuestion() {
-    const questionElement = document.getElementById('question');
-    const answerButtons = document.querySelectorAll('.answer');
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    const question = questions[randomIndex];
 
-    questionElement.textContent = questions[currentQuestionIndex].question;
-    answerButtons.forEach((button, index) => {
-        button.textContent = questions[currentQuestionIndex].answers[index];
-        button.onclick = () => checkAnswer(button.textContent);
+    document.getElementById('question').innerText = question.question;
+    const optionsContainer = document.getElementById('options');
+    optionsContainer.innerHTML = '';
+
+    question.options.forEach((option, index) => {
+        const button = document.createElement('button');
+        button.innerText = option;
+        button.onclick = () => checkAnswer(button, index === question.correct);
+        optionsContainer.appendChild(button);
     });
 }
 
-function checkAnswer(answer) {
-    if (answer === questions[currentQuestionIndex].correct) {
-        alert("¡Correcto!");
+function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+        button.classList.add('correct');
     } else {
-        alert("Incorrecto. La respuesta correcta es " + questions[currentQuestionIndex].correct);
+        button.classList.add('incorrect');
     }
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        loadQuestion();
-    } else {
-        alert("¡Has completado el juego!");
-    }
+    setTimeout(() => {
+        window.location.href = '../pages/ruleta.html';
+    }, 1000);
 }
 
-loadQuestion();
+window.onload = loadQuestion;

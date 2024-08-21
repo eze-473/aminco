@@ -4,43 +4,55 @@
 canvas {
     border: 1px solid black;
 }
-/*h1{
-    color: #007BFF;
-}
 .pregunta {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ffffff;
+    margin: 0;
 }
 
 #quiz-container {
-    background: rgb(201, 201, 201);
-    padding: 10px;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
 }
 
-#answers {
-    display: flex;
-    flex-direction: column;
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-.answer {
-    margin: 5px 0;
+button {
+    display: block;
+    width: 100%;
     padding: 10px;
-    background: #007BFF;
-    color: rgb(255, 255, 255);
+    margin: 10px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
 }
 
-.answer:hover {
-    background: #000000;
-} */
+button:hover {
+    background-color: #ddd;
+}
+
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.incorrect {
+    background-color: red;
+    color: white;
+}
 /*ahrocado*/
 .ahorcadito {
     font-family: Arial, sans-serif;

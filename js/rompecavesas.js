@@ -5,7 +5,7 @@ let timer;
 pieces.forEach((piece, index) => {
     const div = document.createElement('div');
     div.className = 'piece';
-    div.style.backgroundImage = 'url("../img/57.jpg")'; // Reemplaza con la ruta de tu imagen
+    div.style.backgroundImage = 'url("../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/CAMIONETA AMINCO.jpg")'; // Reemplaza con la ruta de tu imagen
     div.style.backgroundPosition = `${-100 * ((piece - 1) % 4)}px ${-100 * Math.floor((piece - 1) / 4)}px`;
     div.dataset.index = piece - 1; // Guardar el índice correcto
     div.draggable = true;
