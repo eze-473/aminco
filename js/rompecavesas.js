@@ -5,12 +5,12 @@ let timer;
 // Lista de imágenes
 const images = [
     "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/CAMIONETA AMINCO.jpg",
-  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS//Topografía descripción de servicios.jpg",
-  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Direccion tecnica de perforaciones portada.jpg",
-  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Geotecnia descripción de servicios.jpg",
-  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/MONTAÑAS.jpg",
-  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Social descripcion de servicios.jpeg",
-  "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Topografia portada.jpg"
+    "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Topografía descripción de servicios.jpg",
+    "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Direccion tecnica de perforaciones portada.jpg",
+    "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Geotecnia descripción de servicios.jpg",
+    "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/MONTAÑAS.jpg",
+    "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Social descripcion de servicios.jpeg",
+    "../img/PANTALLA ROMPECABEZAS/IMAGENES ROMPECABEZAS/Topografia portada.jpg"
 ];
 
 // Seleccionar una imagen al azar
@@ -59,18 +59,40 @@ function checkWin() {
     }
 }
 
-// Agregar cronómetro de 45 segundos
+// Agregar cronómetro de 90 segundos
 let timeLeft = 90;
-const timerDisplay = document.createElement('div');
-timerDisplay.id = 'timer';
-timerDisplay.textContent = `Tiempo restante: ${timeLeft} segundos`;
-document.body.appendChild(timerDisplay);
+const timerCanvas = document.getElementById('timerCanvas');
+const ctx = timerCanvas.getContext('2d');
+
+function drawTimer() {
+    ctx.clearRect(0, 0, timerCanvas.width, timerCanvas.height);
+    ctx.beginPath();
+    ctx.arc(100, 100, 90, 0, 2 * Math.PI);
+    ctx.strokeStyle = '#ffff';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    const endAngle = (2 * Math.PI * timeLeft) / 90;
+    ctx.beginPath();
+    ctx.moveTo(100, 100);
+    ctx.arc(100, 100, 90, -Math.PI / 2, endAngle - Math.PI / 2, false);
+    ctx.fillStyle = '#103b037c';
+    ctx.fill();
+
+    ctx.font = '20px Arial';
+    ctx.fillStyle = '#ffff';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(`${timeLeft} s`, 100, 100);
+}
 
 timer = setInterval(() => {
     timeLeft--;
-    timerDisplay.textContent = `Tiempo restante: ${timeLeft} segundos`;
+    drawTimer();
     if (timeLeft <= 0) {
         clearInterval(timer);
         alert('¡Perdiste!');
     }
 }, 1000);
+
+drawTimer();
