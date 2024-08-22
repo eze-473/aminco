@@ -67,23 +67,23 @@ const ctx = timerCanvas.getContext('2d');
 function drawTimer() {
     ctx.clearRect(0, 0, timerCanvas.width, timerCanvas.height);
     ctx.beginPath();
-    ctx.arc(100, 100, 90, 0, 2 * Math.PI);
+    ctx.arc(50, 50, 45, 0, 2 * Math.PI); // Ajustar el tamaño y la posición
     ctx.strokeStyle = '#ffff';
     ctx.lineWidth = 5;
     ctx.stroke();
 
     const endAngle = (2 * Math.PI * timeLeft) / 90;
     ctx.beginPath();
-    ctx.moveTo(100, 100);
-    ctx.arc(100, 100, 90, -Math.PI / 2, endAngle - Math.PI / 2, false);
+    ctx.moveTo(50, 50);
+    ctx.arc(50, 50, 45, -Math.PI / 2, endAngle - Math.PI / 2, false); // Ajustar el tamaño y la posición
     ctx.fillStyle = '#103b037c';
     ctx.fill();
 
-    ctx.font = '20px Arial';
+    ctx.font = '14px Arial'; // Ajustar el tamaño de la fuente
     ctx.fillStyle = '#ffff';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(`${timeLeft} s`, 100, 100);
+    ctx.fillText(`${timeLeft} s`, 50, 50); // Ajustar la posición del texto
 }
 
 timer = setInterval(() => {
