@@ -85,7 +85,6 @@ function dibujarAhorcado() {
     }
 }
 
-
 function adivinarLetra() {
     const letra = document.getElementById("letra").value;
     if (palabra.includes(letra)) {
@@ -101,11 +100,24 @@ function adivinarLetra() {
     actualizarPalabra();
     document.getElementById("letra").value = "";
     if (!palabraOculta.includes("_")) {
-        alert("¡Ganaste!");
-    } else if (errores >= 7) { // Una vida más
-        alert("¡Perdiste! La palabra era " + palabra);
+        Swal.fire({
+            title: '¡Ganaste!',
+            text: '¡Felicidades, adivinaste la palabra!',
+            imageUrl: "../img/PANTALLA GANASTE.jpg" ,
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Imagen de victoria',
+        });
+    }  else if (errores >= 7) { // Una vida más
+        Swal.fire({
+            title: '¡Perdiste!',
+            text: 'La palabra era ' + palabra,
+            imageUrl: "../img/PANTALLA PERDISTE.jpg",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Imagen de pérdida',
+        });
     }
 }
-
 actualizarPalabra();
 dibujarAhorcado();

@@ -75,15 +75,14 @@ function drawTimer() {
     const endAngle = (2 * Math.PI * timeLeft) / 90;
     ctx.beginPath();
     ctx.moveTo(50, 50);
-    ctx.arc(50, 50, 45, -Math.PI / 2, endAngle - Math.PI / 2, false); // Ajustar el tamaño y la posición
-    ctx.fillStyle = '#103b037c';
+    ctx.arc(50, 50, 45, -Math.PI / 2, endAngle - Math.PI /  false); // Ajustar el tamaño y la posición
     ctx.fill();
 
-    ctx.font = '14px Arial'; // Ajustar el tamaño de la fuente
+    ctx.font = '10px '; // Ajustar el tamaño de la fuente
     ctx.fillStyle = '#ffff';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(`${timeLeft} s`, 50, 50); // Ajustar la posición del texto
+    ctx.fillText(`${timeLeft} `, 50, 50); // Ajustar la posición del texto
 }
 
 timer = setInterval(() => {

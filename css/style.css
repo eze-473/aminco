@@ -100,9 +100,36 @@ button:hover {
 }
 #timerCanvas {
     margin-top: 20px;
+    border: none;
 }
 
 /*memoria*/
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px; /* Aumenta el padding para hacerlo más grande */
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px; /* Ajusta el ancho */
+    height: 300px; /* Ajusta la altura */
+}
+
+.custom-alert .alert-content img {
+    max-width: 280px; /* Aumenta el tamaño de la imagen */
+    margin-bottom: 10px; /* Aumenta el margen inferior */
+}
+
+.custom-alert .alert-content p {
+    margin: 0;
+    font-size: 34px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+}
+
 .fondomemoria{
     background-color: #3081bf;
 }

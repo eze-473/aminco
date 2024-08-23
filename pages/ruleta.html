@@ -4,43 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruleta de 7 lados</title>
-        <link rel="stylesheet" href="../css/style.css" />
-        <title>Document</title>
-      </head>
-<body class="ruleta">
-    <nav>
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link h2" aria-current="page" href="./juegos.html">Juegos</a>
-          </li>
-         
-          
-        </ul>
-       </nav>
-       <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruleta de 7 lados</title>
-        <link rel="stylesheet" href="../css/style.css" />
-        <title>Document</title>
-      </head>
-<body class="ruleta">
-    <nav>
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link h2" aria-current="page" href="./juegos.html">Juegos</a>
-          </li>
-         
-          
-        </ul>
-       </nav>
-       <canvas id="ruleta" width="400" height="400"></canvas>
-       <button id="spinButton">Girar Ruleta</button>
-    <script src="../js/pureba.js"></script>
-</body>
-</html>
- 
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        #ruleta {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 4s ease-out;
+        }
+        .seccion {
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0% 0%;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 95% 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        #flecha {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 30px solid rgb(0, 0, 0);
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #boton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="ruleta"></div>
+    <div id="flecha"></div>
+    <button id="boton">Girar</button>
+
+    <script>
+        const enlaces = [
+            '../pages/preguntados.html#seccion1',
+            '../pages/preguntados.html#seccion2',
+            '../pages/preguntados.html#seccion3',
+            '../pages/preguntados.html#seccion4',
+            '../pages/preguntados.html#seccion5',
+            '../pages/preguntados.html#seccion6',
+            '../pages/preguntados.html#seccion7'
+        ];
+
+        const textos = [
+            'Sección 1',
+            'Sección 2',
+            'Sección 3',
+            'Sección 4',
+            'Sección 5',
+            'Sección 6',
+            'Sección 7'
+        ];
+
+        const ruleta = document.getElementById('ruleta');
+        const boton = document.getElementById('boton');
+        const angulo = 360 / enlaces.length;
+
+        enlaces.forEach((enlace, index) => {
+            const seccion = document.createElement('div');
+            seccion.className = 'seccion';
+            seccion.style.transform = `rotate(${index * angulo}deg) skewY(-${90 - angulo}deg)`;
+            seccion.style.backgroundColor = `hsl(${index * angulo}, 70%, 50%)`;
+            seccion.innerHTML = `<div style="transform: skewY(${90 - angulo}deg) rotate(${angulo / 2}deg);">${textos[index]}</div>`;
+            ruleta.appendChild(seccion);
+        });
+
+        document.getElementById('flecha').style.borderBottomColor = 'red'; // Cambia 'red' por el color que prefieras
+
+        boton.onclick = () => {
+            const randomIndex = Math.floor(Math.random() * enlaces.length);
+            const randomAngle = randomIndex * angulo + (360 * 3); // 3 vueltas completas
+            ruleta.style.transform = `rotate(${randomAngle}deg)`;
+            setTimeout(() => {
+                window.location.href = enlaces[randomIndex];
+            }, 4000); // Espera a que termine la animación
+        };
+    </script>
 </body>
 </html>

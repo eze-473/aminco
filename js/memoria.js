@@ -82,12 +82,28 @@ function unflipCards() {
         resetBoard();
         errorCount++;
         if (errorCount >= maxErrors) {
-            alert('¡Perdiste!');
-            window.location.href = '../index.html'; // Redirigir a otra página
+            showAlertWithImage('¡Perdiste!', "../img/PANTALLA PERDISTE.jpg");
+            setTimeout(() => {
+                window.location.href = '../index.html'; // Redirect to another page
+            }, 3000); // Wait for 3 seconds before redirecting
         }
     }, 1500);
 }
 
+function showAlertWithImage(message, imageUrl) {
+    const alertDiv = document.createElement('div');
+    alertDiv.classList.add('custom-alert');
+    alertDiv.innerHTML = `
+        <div class="alert-content">
+            <img src="${imageUrl}" alt="Game Over">
+            <p>${message}</p>
+        </div>
+    `;
+    document.body.appendChild(alertDiv);
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 3000); // Remove the alert after 3 seconds
+}
 function resetBoard() {
     [firstCard, secondCard, lockBoard] = [null, null, false];
 }
@@ -97,9 +113,25 @@ function checkWin() {
     const flippedCards = document.querySelectorAll('.card.flipped');
     if (allCards.length === flippedCards.length) {
         setTimeout(() => {
-            alert('¡Ganaste!');
+            showWinAlert('¡Ganaste!', "../img/PANTALLA GANASTE.jpg" );
         }, 500);
     }
+}
+
+function showWinAlert(message, imageUrl) {
+    const alertDiv = document.createElement('div');
+    alertDiv.classList.add('custom-alert');
+    alertDiv.innerHTML = `
+        <div class="alert-content">
+            <img src="${imageUrl}" alt="You Win">
+            <p>${message}</p>
+        </div>
+    `;
+    document.body.appendChild(alertDiv);
+    setTimeout(() => {
+        alertDiv.remove();
+        window.location.href = '../index.html'; // Redirigir a otra página
+    }, 3000); // Esperar 3 segundos antes de redirigir
 }
 
 function resetGame() {
