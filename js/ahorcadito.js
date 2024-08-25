@@ -1,4 +1,27 @@
-const palabras = ["topgrafia", "topgrafia", "topgrafia", "topgrafia"];
+const palabras = [
+    "magnetismo",
+    "acuífero",
+    "infiltración",
+    "geológica",
+    "minerales",
+    "conductividad",
+    "electromagnético",
+    "subterránea",
+    "perforación",
+    "geología",
+    "subsuperficial",
+    "permeabilidad",
+    "topografía",
+    "Yacimiento",
+    "Extracción",
+    "Perforación",
+    "Salinidad",
+    "Purificación",
+    "Sedimentación",
+    "Exploración",
+    "Sostenibilidad",
+    "Ingeniería"
+];
 let palabra = palabras[Math.floor(Math.random() * palabras.length)];
 let palabraOculta = Array(palabra.length).fill("_");
 let errores = 0;

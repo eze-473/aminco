@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruleta de 7 lados</title>
+    
     <style>
         body {
             display: flex;
@@ -37,15 +38,21 @@
             font-size: 1.2em;
             text-align: center;
         }
+        .seccion img {
+            transform: skewY(calc(90deg - var(--angulo))) rotate(calc(var(--angulo) / 2));
+            height: 30%;
+            width: 30%;
+            object-fit: cover;
+        }
         #flecha {
             width: 0;
             height: 0;
             border-left: 20px solid transparent;
             border-right: 20px solid transparent;
-            border-bottom: 30px solid rgb(0, 0, 0);
+            border-bottom: 30px solid rgb(8, 3, 3);
             position: absolute;
-            top: -40px;
-            left: 50%;
+            top: 300px;
+            left: 47%;
             transform: translateX(-50%);
         }
         #boton {
@@ -54,55 +61,59 @@
             font-size: 16px;
             cursor: pointer;
         }
+        .highlight {
+            border: 3px solid yellow;
+        }
     </style>
 </head>
+<img src=alt="">
 <body>
     <div id="ruleta"></div>
     <div id="flecha"></div>
     <button id="boton">Girar</button>
-
     <script>
         const enlaces = [
-            '../pages/preguntados.html#seccion1',
-            '../pages/preguntados.html#seccion2',
-            '../pages/preguntados.html#seccion3',
-            '../pages/preguntados.html#seccion4',
-            '../pages/preguntados.html#seccion5',
+            '../pages/geologia.html#seccion1',
+            '../pages/pregtop.html#seccion2',
+            '../pages/hidrologia.html#seccion3',
+            '../pages/medioambiente.html#seccion4',
+            '../pages/mineria.html#seccion5',
             '../pages/preguntados.html#seccion6',
-            '../pages/preguntados.html#seccion7'
+            '../pages/404.html#seccion7'
         ];
-
-        const textos = [
-            'Sección 1',
-            'Sección 2',
-            'Sección 3',
-            'Sección 4',
-            'Sección 5',
-            'Sección 6',
-            'Sección 7'
+        const imagenes = [
+            "../img/PANTALLA TRIVIA/LOGOS RULETA/GEOLOGÍA.png",
+            "../img/PANTALLA TRIVIA/LOGOS RULETA/TOPOGRAFÍA.png",
+            "../img/PANTALLA TRIVIA/LOGOS RULETA/HIDROLOGÍA.png" ,
+           "../img/PANTALLA TRIVIA/LOGOS RULETA/MEDIOAMBIENTE.png",
+           "../img/PANTALLA TRIVIA/LOGOS RULETA/MINERÍA.png",
+           "../img/PANTALLA TRIVIA/LOGOS RULETA/SOCIAL.png",
+            'ruta/a/imagen7.jpg'
         ];
-
         const ruleta = document.getElementById('ruleta');
         const boton = document.getElementById('boton');
         const angulo = 360 / enlaces.length;
-
-        enlaces.forEach((enlace, index) => {
+        imagenes.forEach((imagen, index) => {
             const seccion = document.createElement('div');
             seccion.className = 'seccion';
-            seccion.style.transform = `rotate(${index * angulo}deg) skewY(-${90 - angulo}deg)`;
+            seccion.style.setProperty('--angulo', `${angulo}deg`);
+            seccion.style.transform = `rotate(${index * angulo}deg) skewY(calc(-90deg + ${angulo}deg))`;
             seccion.style.backgroundColor = `hsl(${index * angulo}, 70%, 50%)`;
-            seccion.innerHTML = `<div style="transform: skewY(${90 - angulo}deg) rotate(${angulo / 2}deg);">${textos[index]}</div>`;
+            seccion.innerHTML = `<img src="${imagen}" alt="Imagen ${index + 1}">`;
             ruleta.appendChild(seccion);
         });
 
-        document.getElementById('flecha').style.borderBottomColor = 'red'; // Cambia 'red' por el color que prefieras
-
         boton.onclick = () => {
             const randomIndex = Math.floor(Math.random() * enlaces.length);
-            const randomAngle = randomIndex * angulo + (360 * 3); // 3 vueltas completas
+            const randomAngle = (360 * 3) - (randomIndex * angulo); // 3 vueltas completas y ajusta para que quede en la flecha
             ruleta.style.transform = `rotate(${randomAngle}deg)`;
             setTimeout(() => {
-                window.location.href = enlaces[randomIndex];
+                const secciones = document.querySelectorAll('.seccion');
+                secciones.forEach(seccion => seccion.classList.remove('highlight'));
+                secciones[randomIndex].classList.add('highlight');
+                setTimeout(() => {
+                    window.location.href = enlaces[randomIndex];
+                }, 1000); // Espera un segundo antes de redirigir
             }, 4000); // Espera a que termine la animación
         };
     </script>
