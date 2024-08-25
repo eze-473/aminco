@@ -1,4 +1,17 @@
-
+/*footer*/
+footer {
+    display: flex;
+    align-items: center;
+  
+}
+footer img {
+    width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    margin-right: 20px;
+}
+footer p {
+    margin: 0;
+}
 /*menu*/
 .fondomenu{
     background-color: #005596;
