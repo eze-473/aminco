@@ -29,24 +29,45 @@ function playPattern() {
     }, 1000);
 }
 
+function showCustomAlert(message, imagePath) {
+    const alertBox = document.createElement('div');
+    alertBox.classList.add('custom-alert');
+    alertBox.innerHTML = `
+        <div class="alert-content">
+            <img src="${imagePath}" alt="${message}">
+            <p>${message}</p>
+            <button onclick="closeCustomAlert()">OK</button>
+        </div>
+    `;
+    document.body.appendChild(alertBox);
+}
+
+function closeCustomAlert() {
+    const alertBox = document.querySelector('.custom-alert');
+    if (alertBox) {
+        alertBox.remove();
+    }
+    window.location.href = '../index.html'; // Redirigir a otra página
+}
+
 function checkPattern() {
     if (userPattern.length === pattern.length) {
         if (userPattern.every((img, index) => img === pattern[index])) {
             level++;
             errors = 0; // Reset errors on correct pattern
             if (level === 8) {
-                alert('¡Ganaste!');
+                showCustomAlert('¡Ganaste!', "../img/PANTALLA GANASTE.jpg");
                 level = 0;
                 pattern = [];
+            } else {
+                userPattern = [];
+                generatePattern();
+                setTimeout(playPattern, 1000);
             }
-            userPattern = [];
-            generatePattern();
-            setTimeout(playPattern, 1000);
         } else {
             errors++;
             if (errors === 1) {
-                alert('Perdiste. Inténtalo de nuevo.');
-                window.location.href = '../index.html'; // Redirigir a otra página
+                showCustomAlert( "../img/PANTALLA PERDISTE.jpg");
                 errors = 0;
             }
             userPattern = [];
