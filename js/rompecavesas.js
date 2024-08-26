@@ -26,6 +26,9 @@ pieces.forEach((piece, index) => {
     div.addEventListener('dragstart', dragStart);
     div.addEventListener('dragover', dragOver);
     div.addEventListener('drop', drop);
+    div.addEventListener('touchstart', touchStart);
+    div.addEventListener('touchmove', touchMove);
+    div.addEventListener('touchend', touchEnd);
     puzzle.appendChild(div);
 });
 
@@ -50,6 +53,26 @@ function drop(event) {
     }
 }
 
+function touchStart(event) {
+    dragged = event.target;
+}
+
+function touchMove(event) {
+    event.preventDefault();
+    const touch = event.touches[0];
+    const element = document.elementFromPoint(touch.clientX, touch.clientY);
+    if (element && element.className === 'piece') {
+        const draggedIndex = Array.from(puzzle.children).indexOf(dragged);
+        const targetIndex = Array.from(puzzle.children).indexOf(element);
+        puzzle.insertBefore(dragged, puzzle.children[targetIndex]);
+        puzzle.insertBefore(element, puzzle.children[draggedIndex]);
+    }
+}
+
+function touchEnd(event) {
+    checkWin();
+}
+
 function checkWin() {
     const currentOrder = Array.from(puzzle.children).map(piece => parseInt(piece.dataset.index));
     const correctOrder = Array.from({ length: 16 }, (_, i) => i);
@@ -59,8 +82,9 @@ function checkWin() {
     }
 }
 
+
 // Agregar cronómetro de 90 segundos
-let timeLeft = 90;
+let timeLeft = 10;
 const timerCanvas = document.getElementById('timerCanvas');
 const ctx = timerCanvas.getContext('2d');
 
@@ -90,8 +114,42 @@ timer = setInterval(() => {
     drawTimer();
     if (timeLeft <= 0) {
         clearInterval(timer);
-        alert('¡Perdiste!');
+        showMessage('Se acabó el tiempo');
     }
 }, 1000);
 
 drawTimer();
+
+function showMessage(message) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'message';
+    messageDiv.textContent = message;
+    messageDiv.style.position = 'absolute';
+    messageDiv.style.top = '40px';
+    messageDiv.style.left = '50%';
+    messageDiv.style.transform = 'translateX(-50%)';
+    messageDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.)';
+    messageDiv.style.color = 'white';
+    messageDiv.style.padding = '10px';
+    messageDiv.style.borderRadius = '5px';
+    messageDiv.style.fontSize = '54px'; // Ajustar el tamaño de la fuente
+    messageDiv.style.fontWeight = 'bold'; // Hacer el texto en negrita
+    document.body.appendChild(messageDiv);
+}  messageDiv.style.color = 'white';
+messageDiv.style.padding = '10px';
+messageDiv.style.borderRadius = '5px';
+messageDiv.style.fontSize = '24px'; // Ajustar el tamaño de la fuente
+messageDiv.style.fontWeight = 'bold'; // Hacer el texto en negrita
+document.body.appendChild(messageDiv);
+
+
+// Modificar la función checkWin para mostrar el mensaje de victoria
+function checkWin() {
+const currentOrder = Array.from(puzzle.children).map(piece => parseInt(piece.dataset.index));
+const correctOrder = Array.from({ length: 16 }, (_, i) => i);
+if (currentOrder.every((pos, index) => pos === correctOrder[index])) {
+    clearInterval(timer);
+    showWinMessage('¡Ganaste!');
+}
+
+}
