@@ -1,15 +1,5 @@
 const questions = [
     {
-        question: "¿Cuál es el río más largo del mundo?",
-        options: ["Nilo", "Amazonas", "Yangtsé", "Misisipi"],
-        correct: 1
-    },
-    {
-        question: "¿Quién pintó la Mona Lisa?",
-        options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
-        correct: 2
-    },
-    {
         question: "¿Cuál es uno de los minerales más comúnmente extraídos en la minería?",
         options: ["Petróleo", "Carbón", "Agua", "Nitrógeno"],
         correct: 1
@@ -17,7 +7,7 @@ const questions = [
     {
         question: "¿Qué método se utiliza comúnmente en la minería subterránea para extraer minerales?",
         options: ["Perforación y voladura", "Dragado", "Evaporación", "Reforestación"],
-        correct: 0
+        correct: 1
     },
     {
         question: "¿Qué es una mina de placer?",
@@ -27,7 +17,7 @@ const questions = [
     {
         question: "¿Qué es la lixiviación en la minería?",
         options: ["Un proceso de extracción de minerales disolviéndolos en un solvente", "Una técnica para medir la pureza del mineral", "Un método para fundir minerales a altas temperaturas", "Una práctica de minería submarina"],
-        correct: 0
+        correct: 1
     },
     {
         question: "¿Cuál es uno de los principales desafíos de la minería en regiones remotas?",
@@ -102,7 +92,7 @@ const questions = [
     {
         question: "¿Qué es la lixiviación en la minería?",
         options: ["Un proceso de extracción de minerales disolviéndolos en un solvente", "Una técnica para medir la pureza del mineral", "Un método para fundir minerales a altas temperaturas", "Una práctica de minería submarina"],
-        correct: 0
+        correct: 1
     },
     {
         question: "¿Cuál es uno de los principales desafíos de la minería en regiones remotas?",
@@ -152,7 +142,7 @@ const questions = [
     {
         question: "¿Qué es el triángulo del litio?",
         options: ["Una región entre Chile, Argentina y Bolivia que contiene grandes reservas de litio", "Un método para refinar litio", "Un tipo de mina de litio en forma triangular", "Un instrumento de medición en minería"],
-        correct: 0
+        correct: 1
     },
     {
         question: "¿Qué metal se encuentra comúnmente junto al litio en los depósitos de salmuera?",

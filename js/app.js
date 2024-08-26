@@ -3,12 +3,12 @@ const questions = [
     question:
       "¿Qué es la responsabilidad social empresarial (RSE) en la minería?",
     options: [
-      "La maximización de las ganancias a cualquier costo",
       "El compromiso de las empresas mineras con el desarrollo sostenible y el bienestar de las comunidades",
       "La reducción de los costos operativos",
+      "La maximización de las ganancias a cualquier costo",
       "La expansión de operaciones sin importar el impacto ambiental",
     ],
-    correct: 1,
+    correct: 3,
   },
   {
     question:
@@ -19,7 +19,7 @@ const questions = [
       "Desalojar comunidades sin compensación",
       "No cumplir con las normativas ambientales",
     ],
-    correct: 0,
+    correct: 1,
   },
   {
     question:
@@ -30,7 +30,7 @@ const questions = [
       "Para reducir los costos de producción",
       "Para aumentar la extracción de minerales",
     ],
-    correct: 0,
+    correct: 1,
   },
   {
     question: "¿Qué es la minería responsable?",
@@ -135,7 +135,7 @@ const questions = [
       "Desalojar comunidades sin compensación",
       "No cumplir con las normativas ambientales",
     ],
-    correct: 0,
+    correct: 1,
   },
   {
     question:

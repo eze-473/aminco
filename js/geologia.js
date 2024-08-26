@@ -12,7 +12,7 @@ const questions = [
     {
         question: "¿Cómo se llama el proceso por el cual las rocas se rompen en pedazos más pequeños por la acción del viento, agua o hielo?",
         options: ["Erosión", "Compactación", "Metamorfismo", "Solidificación"],
-        correct: 0
+        correct: 1
     },
     {
         question: "¿Cuál es el nombre de la capa más externa de la Tierra?",
@@ -47,7 +47,7 @@ const questions = [
     {
         question: "¿Qué escala se utiliza para medir la dureza de los minerales?",
         options: ["Escala de Mohs", "Escala Richter", "Escala de Mercalli", "Escala de Fahrenheit"],
-        correct: 0
+        correct: 1
     },
     {
         question: "¿Qué tipo de roca se forma bajo altas presiones y temperaturas, pero sin llegar a fundirse?",
@@ -62,7 +62,7 @@ const questions = [
     {
         question: "¿Cuál es la roca más abundante en la corteza terrestre?",
         options: ["Granito", "Mármol", "Basalto", "Caliza"],
-        correct: 0
+        correct: 1
     },
     {
         question: "¿Qué tipo de roca es el mármol?",
