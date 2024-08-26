@@ -12,15 +12,15 @@ const palabras = [
     "subsuperficial",
     "permeabilidad",
     "topografía",
-    "Yacimiento",
-    "Extracción",
-    "Perforación",
-    "Salinidad",
-    "Purificación",
-    "Sedimentación",
-    "Exploración",
-    "Sostenibilidad",
-    "Ingeniería"
+    "yacimiento",
+    "extracción",
+    "perforación",
+    "salinidad",
+    "purificación",
+    "sedimentación",
+    "exploración",
+    "sostenibilidad",
+    "ingeniería"
 ];
 let palabra = palabras[Math.floor(Math.random() * palabras.length)];
 let palabraOculta = Array(palabra.length).fill("_");
