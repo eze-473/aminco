@@ -153,7 +153,7 @@
     
         ruleta.onclick = () => {
             const randomIndex = Math.floor(Math.random() * enlaces.length);
-            const randomAngle = (360 * 3) - (randomIndex * angulo),// 3 vueltas completas y ajusta para que quede en la flecha
+            const randomAngle = (360 * 3) - (randomIndex * angulo)// 3 vueltas completas y ajusta para que quede en la flecha
             ruleta.style.transform = `rotate(${randomAngle}deg)`;
             setTimeout(() => {
                 secciones[randomIndex].classList.add('highlight');
