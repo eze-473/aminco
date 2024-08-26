@@ -83,12 +83,12 @@
             border-right: 20px solid transparent;
             border-bottom: 30px solid rgb(0, 0, 0);
             position: absolute;
-            top: 300px;
-            left: 75%;
-            transform: translateX(-80%) rotate(0deg); /* Gira la flecha 90 grados a la derecha */
+            top: 310px;
+            left: 76%;
+            transform: translateX(-89%) rotate(90deg); /* Gira la flecha 90 grados a la derecha */
         }
         .highlight {
-            border: 100px solid rgb(0, 4, 255);
+            border: 3px solid rgb(0, 4, 255);
         }
         .imagen-ruleta {
             position: absolute;
@@ -152,15 +152,17 @@
         });
     
         ruleta.onclick = () => {
-            const randomIndex = Math.floor(Math.random() * enlaces.length);
-            const randomAngle = (360 * 3) - (randomIndex * angulo)// 3 vueltas completas y ajusta para que quede en la flecha
-            ruleta.style.transform = `rotate(${randomAngle}deg)`;
-            setTimeout(() => {
-                secciones[randomIndex].classList.add('highlight');
-                setTimeout(() => {
-                    window.location.href = enlaces[randomIndex];
-                }, 1000); // Espera un segundo antes de redirigir para mostrar el resaltado
-            }, 4000); // Espera a que termine la animación antes de resaltar y redirigir
+           const randomIndex = Math.floor(Math.random() * enlaces.length);
+const anguloPorSeccion = 360 / enlaces.length;
+const randomAngle = (360 * 3) - (randomIndex * anguloPorSeccion) + (anguloPorSeccion / 10); // Ajusta para que quede en la parte superior
+ruleta.style.transform = `rotate(${randomAngle}deg)`;
+
+setTimeout(() => {
+    secciones[randomIndex].classList.add('highlight');
+    setTimeout(() => {
+        window.location.href = enlaces[randomIndex];
+    }, 1000); // Espera un segundo antes de redirigir para mostrar el resaltado
+}, 4000); // Espera a que termine la animación antes de resaltar y redirigir
         };
     </script>
      </main>

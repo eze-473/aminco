@@ -29,8 +29,39 @@ canvas {
     align-items: center;
     height: 100vh;
     margin: 0;
-    
+}
+.hodrologia{
         background-image: url("../img/PANTALLAS PREGUNTAS/PANTALLA HIDROLOGÍA.jpg");
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Fija la imagen al fondo */
+}
+.geologia{
+        background-image: url("../img/PANTALLAS PREGUNTAS/PANTALLA GEOLOGÍA.jpg");
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Fija la imagen al fondo */
+}
+.topografia{
+        background-image: url("../img/PANTALLAS PREGUNTAS/PANTALLA TOPOGRAFÍA.jpg" );
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Fija la imagen al fondo */
+}
+.ambiental{
+        background-image: url("../img/PANTALLAS PREGUNTAS/PANTALLA AMBIENTAL.jpg");
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Fija la imagen al fondo */
+}
+.social{
+        background-image: url("../img/PANTALLAS PREGUNTAS/PANTALLA SOCIAL.jpg");
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Fija la imagen al fondo */
+}
+.mineria{
+        background-image: url("../img/PANTALLAS PREGUNTAS/PANTALLA MINERÍA.jpg");
         background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
         background-repeat: no-repeat; /* Evita que la imagen se repita */
         background-attachment: fixed; /* Fija la imagen al fondo */
@@ -42,7 +73,7 @@ canvas {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
- width: 500000px;    
+ width: 60%;    
  height: 100%;
     }
 
@@ -208,8 +239,8 @@ button:hover {
     flex-wrap: wrap;
 }
 .image-container img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     cursor: pointer;
     opacity: 0.5;
     transition: opacity 0.5s;
@@ -220,6 +251,7 @@ button:hover {
 .disabled {
     pointer-events: none;
 }
+
 @media (max-width: 600px) {
     .image-container {
         justify-content: center; /* Centrar las imágenes en pantallas pequeñas */
