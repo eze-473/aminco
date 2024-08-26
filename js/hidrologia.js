@@ -29,12 +29,12 @@ const questions = [
   {
     question: "¿Qué es el ciclo hidrológico?",
     options: [
-      "El movimiento del agua en la Tierra, desde la atmósfera hasta la superficie y de nuevo a la atmósfera",
       "El ciclo de nutrientes en el suelo",
       "El proceso de formación de ríos",
       "El cambio de estaciones",
+      "El movimiento del agua en la Tierra, desde la atmósfera hasta la superficie y de nuevo a la atmósfera"
     ],
-    correct: 0,
+    correct: 4,
   },
   {
     question: "¿Qué fenómeno puede ocurrir si un acuífero se sobreexplota?",
@@ -77,12 +77,12 @@ const questions = [
     question:
       "¿Cuál es la principal diferencia entre la perforación de pozo y la perforación de túnel en minería?",
     options: [
-      "La perforación de pozo se realiza verticalmente, mientras que la perforación de túnel es horizontal",
       "La perforación de túnel es más rápida",
       "La perforación de pozo no se utiliza en minería",
       "La perforación de túnel requiere menos equipo",
+      "La perforación de pozo se realiza verticalmente, mientras que la perforación de túnel es horizontal"
     ],
-    correct: 0,
+    correct: 4,
   },
   {
     question:
