@@ -187,6 +187,7 @@ const questions = [
       "Una vista aérea del terreno",
       "Un perfil que muestra una “corte” del terreno a lo largo de una línea específica",
       "Un mapa de carreteras",
+      "Un diagrama del clima",
     ],
     correct: 2,
   },

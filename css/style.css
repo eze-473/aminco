@@ -24,22 +24,27 @@ canvas {
 }
 .pregunta {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    
+        background-image: url("../img/PANTALLAS PREGUNTAS/PANTALLA HIDROLOGÍA.jpg");
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Fija la imagen al fondo */
 }
 
 #quiz-container {
-    background-color: #fff;
-    padding: 20px;
+  margin:0px 0px 0px 400px;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
-}
+ width: 500000px;    
+ height: 100%;
+    }
 
 h2 {
     font-size: 1.5em;
@@ -49,10 +54,12 @@ h2 {
 button {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 35px;
     margin: 10px 0;
     border: none;
-    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: #0059ff;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s;
