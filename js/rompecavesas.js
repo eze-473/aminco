@@ -84,7 +84,7 @@ function checkWin() {
 
 
 // Agregar cronómetro de 90 segundos
-let timeLeft = 10;
+let timeLeft = 90;
 const timerCanvas = document.getElementById('timerCanvas');
 const ctx = timerCanvas.getContext('2d');
 
