@@ -51,28 +51,28 @@ function closeCustomAlert() {
 }
 
 function checkPattern() {
-    if (userPattern.length === pattern.length) {
-        if (userPattern.every((img, index) => img === pattern[index])) {
-            level++;
-            errors = 0; // Reset errors on correct pattern
-            if (level === 8) {
-                showCustomAlert('¡Ganaste!', "../img/PANTALLA GANASTE.jpg");
-                level = 0;
-                pattern = [];
-            } else {
-                userPattern = [];
-                generatePattern();
-                setTimeout(playPattern, 1000);
-            }
-        } else {
-            errors++;
-            if (errors === 1) {
-                showCustomAlert( "../img/PANTALLA PERDISTE.jpg");
-                errors = 0;
-            }
+    for (let i = 0; i < userPattern.length; i++) {
+        if (userPattern[i] !== pattern[i]) {
+            showCustomAlert('¡Fallaste!', "../img/PANTALLA PERDISTE.jpg");
+            errors = 0;
             userPattern = [];
             level = 0;
             pattern = [];
+            generatePattern();
+            setTimeout(playPattern, 1000);
+            return;
+        }
+    }
+
+    if (userPattern.length === pattern.length) {
+        level++;
+        errors = 0; // Reset errors on correct pattern
+        if (level === 8) {
+            showCustomAlert('¡Ganaste!', "../img/PANTALLA GANASTE.jpg");
+            level = 0;
+            pattern = [];
+        } else {
+            userPattern = [];
             generatePattern();
             setTimeout(playPattern, 1000);
         }

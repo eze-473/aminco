@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruleta de 7 lados</title>
-    
     <style>
         body {
             display: flex;
@@ -20,7 +19,7 @@
             border-radius: 50%;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px rgb(25, 0, 255);
             transition: transform 4s ease-out;
         }
         .seccion {
@@ -30,7 +29,7 @@
             top: 50%;
             left: 50%;
             transform-origin: 0% 0%;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 95% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 85% 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,48 +37,59 @@
             font-size: 1.2em;
             text-align: center;
         }
-        .seccion img {
-            transform: skewY(calc(90deg - var(--angulo))) rotate(calc(var(--angulo) / 2));
-            height: 30%;
-            width: 30%;
+        .imagen-ruleta {
+            position: absolute;
+            top: 25%;
+            left: 58%;
+            transform: translate(-30%, -30%);
+            height: 40%;
+            width: 40%;
             object-fit: cover;
         }
         #flecha {
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-bottom: 30px solid rgb(8, 3, 3);
-            position: absolute;
-            top: 300px;
-            left: 47%;
-            transform: translateX(-50%);
-        }
-        #boton {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid rgb(68, 0, 255);
+    position: absolute;
+    top: 300px;
+    left: 51%;
+    transform: translateX(-60%) rotate(90deg); /* Gira la flecha 90 grados a la derecha */
+}
+ #boton {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
         }
         .highlight {
-            border: 3px solid yellow;
+            border: 3px solid rgb(0, 4, 255);
         }
+        
     </style>
 </head>
-<img src=alt="">
 <body>
+    <nav>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link h2" aria-current="page" href="./juegos.html">Juegos</a>
+          </li>
+        
+        
+        </ul>
+       </nav>
     <div id="ruleta"></div>
     <div id="flecha"></div>
     <button id="boton">Girar</button>
     <script>
-        const enlaces = [
+          const enlaces = [
             '../pages/geologia.html#seccion1',
             '../pages/pregtop.html#seccion2',
             '../pages/hidrologia.html#seccion3',
             '../pages/medioambiente.html#seccion4',
             '../pages/mineria.html#seccion5',
             '../pages/preguntados.html#seccion6',
-            '../pages/404.html#seccion7'
         ];
         const imagenes = [
             "../img/PANTALLA TRIVIA/LOGOS RULETA/GEOLOGÍA.png",
@@ -88,19 +98,21 @@
            "../img/PANTALLA TRIVIA/LOGOS RULETA/MEDIOAMBIENTE.png",
            "../img/PANTALLA TRIVIA/LOGOS RULETA/MINERÍA.png",
            "../img/PANTALLA TRIVIA/LOGOS RULETA/SOCIAL.png",
-            'ruta/a/imagen7.jpg'
         ];
         const ruleta = document.getElementById('ruleta');
         const boton = document.getElementById('boton');
         const angulo = 360 / enlaces.length;
+        const secciones = [];
+
         imagenes.forEach((imagen, index) => {
             const seccion = document.createElement('div');
             seccion.className = 'seccion';
             seccion.style.setProperty('--angulo', `${angulo}deg`);
             seccion.style.transform = `rotate(${index * angulo}deg) skewY(calc(-90deg + ${angulo}deg))`;
-            seccion.style.backgroundColor = `hsl(${index * angulo}, 70%, 50%)`;
-            seccion.innerHTML = `<img src="${imagen}" alt="Imagen ${index + 1}">`;
+            seccion.style.backgroundColor = `hsl(${index * angulo}, 100%, 90%)`;
+            seccion.innerHTML = `<img src="${imagen}" alt="Imagen ${index + 1}" class="imagen-ruleta">`;
             ruleta.appendChild(seccion);
+            secciones.push(seccion);
         });
 
         boton.onclick = () => {
@@ -108,17 +120,12 @@
             const randomAngle = (360 * 3) - (randomIndex * angulo); // 3 vueltas completas y ajusta para que quede en la flecha
             ruleta.style.transform = `rotate(${randomAngle}deg)`;
             setTimeout(() => {
-                const secciones = document.querySelectorAll('.seccion');
-                secciones.forEach(seccion => seccion.classList.remove('highlight'));
                 secciones[randomIndex].classList.add('highlight');
                 setTimeout(() => {
                     window.location.href = enlaces[randomIndex];
-                }, 1000); // Espera un segundo antes de redirigir
-            }, 4000); // Espera a que termine la animación
+                }, 1000); // Espera un segundo antes de redirigir para mostrar el resaltado
+            }, 4000); // Espera a que termine la animación antes de resaltar y redirigir
         };
     </script>
-     <footer>
-        <img src="../img/LOGO AMINCO PNG CON FONDO BLANCO.png" alt="Descripción de la imagen">
-    </footer>
 </body>
 </html>

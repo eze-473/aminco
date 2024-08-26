@@ -192,32 +192,32 @@ const questions = [
     {
         question: "¿Cómo pueden las empresas mineras prevenir la deforestación en sus operaciones?",
         options: [
-            "Utilizando maquinaria pesada en todas las áreas",
             "Planificando y limitando las áreas de impacto, y restaurando áreas afectadas",
             "No tomando ninguna acción",
+            "Utilizando maquinaria pesada en todas las áreas",
             "Desviando ríos para facilitar la minería"
         ],
-        correct: 1
+        correct: 3
     },
     {
         question: "¿Qué rol juega la transparencia en la responsabilidad ambiental de una empresa minera?",
         options: [
-            "Ocultar los informes ambientales",
             "Publicar y comunicar abiertamente los impactos ambientales y las medidas tomadas",
             "Mantener los datos confidenciales",
-            "Evitar las auditorías ambientales"
+            "Evitar las auditorías ambientales",
+            "Ocultar los informes ambientales"
         ],
-        correct: 1
+        correct: 4
     },
     {
         question: "¿Qué es la minería con “cero residuos”?",
         options: [
-            "Minería sin extracción de minerales",
             "Minería que busca reducir al máximo la generación de residuos y reciclar todo lo posible",
             "Minería que produce residuos y los almacena sin tratamiento",
+            "Minería sin extracción de minerales",
             "Minería que no utiliza ningún tipo de energía"
         ],
-        correct: 1
+        correct: 3
     },
     {
         question: "¿Cómo pueden las empresas mineras reducir su huella de carbono?",
@@ -232,12 +232,12 @@ const questions = [
     {
         question: "¿Qué importancia tiene la consulta previa con las comunidades en la minería?",
         options: [
-            "Es una formalidad sin importancia",
             "Es esencial para obtener la aceptación y colaborar en la mitigación de impactos",
+            "Es una formalidad sin importancia",
             "No es necesaria si la mina es pequeña",
             "Es solo un trámite para obtener permisos"
         ],
-        correct: 1
+        correct: 2
     },
     {
         question: "¿Qué medida es fundamental para la protección de la biodiversidad en áreas mineras?",
@@ -272,12 +272,12 @@ const questions = [
     {
         question: "¿Qué significa la certificación ambiental para una empresa minera?",
         options: [
-            "Un reconocimiento de altos estándares en la gestión ambiental",
             "Un requisito legal sin impacto en las operaciones",
             "Una insignia para mejorar las ventas",
-            "Un permiso para realizar cualquier tipo de operación minera"
+            "Un permiso para realizar cualquier tipo de operación minera",
+            "Un reconocimiento de altos estándares en la gestión ambiental"
         ],
-        correct: 0
+        correct: 4
     },
     {
         question: "¿Qué papel juegan los auditores ambientales en la minería?",
@@ -302,22 +302,22 @@ const questions = [
     {
         question: "¿Qué es el Plan de Cierre de Minas?",
         options: [
-            "Un documento que detalla cómo se abandonará una mina sin restauración",
             "Un plan que establece cómo se rehabilitará el área afectada una vez finalizadas las operaciones mineras",
             "Un permiso para extender la vida útil de la mina",
+            "Un documento que detalla cómo se abandonará una mina sin restauración",
             "Una estrategia para abrir nuevas áreas mineras"
         ],
-        correct: 1
+        correct: 3
     },
     {
         question: "¿Qué es el monitoreo ambiental en minería?",
         options: [
-            "Una actividad opcional que no afecta las operaciones",
             "La evaluación continua de los impactos ambientales de las actividades mineras para tomar medidas correctivas",
             "Una forma de incrementar los costos operativos",
-            "Una práctica solo necesaria en grandes minas"
+            "Una práctica solo necesaria en grandes minas",
+            "Una actividad opcional que no afecta las operaciones"
         ],
-        correct: 1
+        correct: 4
     }
 ];
 
