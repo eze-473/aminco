@@ -44,22 +44,26 @@ function dibujarAhorcado() {
     ctx.stroke();
 
     // Dibujar el poste vertical
+     ctx.strokeStyle = '#00e1ff'
     ctx.moveTo(50, 190);
     ctx.lineTo(50, 10);
     ctx.stroke();
 
     // Dibujar el poste horizontal
+     ctx.strokeStyle = '#00e1ff'
     ctx.moveTo(50, 10);
     ctx.lineTo(150, 10);
     ctx.stroke();
 
     // Dibujar la cuerda
+     ctx.strokeStyle = '#00e1ff'
     ctx.moveTo(150, 10);
     ctx.lineTo(150, 30);
     ctx.stroke();
 
     // Dibujar la cabeza
     if (errores > 0) {
+         ctx.strokeStyle = '#00e1ff'
         ctx.beginPath();
         ctx.arc(150, 50, 20, 0, Math.PI * 2);
         ctx.stroke();
@@ -67,6 +71,7 @@ function dibujarAhorcado() {
 
     // Dibujar la soga
     if (errores > 1) {
+         ctx.strokeStyle = '#00e1ff'
         ctx.moveTo(150, 30);
         ctx.lineTo(150, 50);
         ctx.stroke();
@@ -74,6 +79,7 @@ function dibujarAhorcado() {
 
     // Dibujar el torso
     if (errores > 2) {
+         ctx.strokeStyle = '#00e1ff'
         ctx.moveTo(150, 70);
         ctx.lineTo(150, 130);
         ctx.stroke();
@@ -88,6 +94,7 @@ function dibujarAhorcado() {
 
     // Dibujar la otra mano
     if (errores > 4) {
+         ctx.strokeStyle = '#00e1ff'
         ctx.moveTo(150, 90);
         ctx.lineTo(170, 110);
         ctx.stroke();
@@ -95,6 +102,7 @@ function dibujarAhorcado() {
 
     // Dibujar un pie
     if (errores > 5) {
+         ctx.strokeStyle = '#00e1ff'
         ctx.moveTo(150, 130);
         ctx.lineTo(130, 160);
         ctx.stroke();
@@ -102,6 +110,7 @@ function dibujarAhorcado() {
 
     // Dibujar el otro pie
     if (errores > 6) {
+         ctx.strokeStyle = '#00e1ff'
         ctx.moveTo(150, 130);
         ctx.lineTo(170, 160);
         ctx.stroke();

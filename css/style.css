@@ -97,7 +97,7 @@ button {
 }
 
 button:hover {
-    background-color: #ddd;
+    background-color: #000000;
 }
 
 .correct {
@@ -113,12 +113,14 @@ button:hover {
 .ahorcadito {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #00ffd5;
 }
 
+
 #ahorcado {
-    border: 1px solid #00e1ff;
+    border: 2px solid #00e1ff;
     margin: 20px auto;
+  
 }
 
 #palabra {
