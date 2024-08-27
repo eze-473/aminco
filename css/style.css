@@ -22,6 +22,9 @@ footer p {
 canvas {
     border: 1px solid black;
 }
+.textonegro{
+    color: #000000;
+}
 .pregunta {
     font-family: Arial, sans-serif;
     display: flex;
