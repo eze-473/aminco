@@ -1,11 +1,5 @@
 const questions = [
   {
-    question:
-      "¿Cuál es el nombre del supercontinente que existió hace millones de años?",
-    options: ["Gondwana", "Pangea", "Laurasia", "Rodinia"],
-    correct: 2,
-  },
-  {
     question: "¿Cuál es el mineral más duro conocido en la Tierra?",
     options: ["Oro", "Diamante", "Cuarzo", "Plata"],
     correct: 2,
@@ -29,13 +23,13 @@ const questions = [
       "Roca metamórfica",
       "Roca evaporítica",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
       "¿Cómo se llama el proceso por el cual el agua se infiltra en el suelo y llena los espacios vacíos?",
     options: ["Precipitación", "Infiltración", "Evaporación", "Condensación"],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
@@ -46,12 +40,12 @@ const questions = [
       "Roca metamórfica",
       "Roca volcánica",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question: "¿Cuál de los siguientes es un ejemplo de un mineral?",
     options: ["Granito", "Basalto", "Cuarzo", "Arenisca"],
-    correct: 2,
+    correct: 3,
   },
   {
     question: "¿Qué es un fósil?",
@@ -61,7 +55,7 @@ const questions = [
       "Restos preservados de organismos antiguos",
       "Un tipo de roca",
     ],
-    correct: 2,
+    correct: 3,
   },
   {
     question: "¿Qué escala se utiliza para medir la dureza de los minerales?",
@@ -82,12 +76,23 @@ const questions = [
       "Roca metamórfica",
       "Roca volcánica",
     ],
+    correct: 3,
+  },
+  {
+    question:
+      "¿Cuál es el nombre del supercontinente que existió hace millones de años?",
+    options: [
+      "Gondwana",
+      "Pangea  ",
+      "Laurasia",
+      "Rodinia",
+    ],
     correct: 2,
   },
   {
     question: "¿Cómo se llama el proceso de formación de montañas?",
     options: ["Sedimentación", "Orogénesis", "Volcanismo", "Meteorización"],
-    correct: 1,
+    correct: 2,
   },
   {
     question: "¿Cuál es la roca más abundante en la corteza terrestre?",
@@ -97,18 +102,18 @@ const questions = [
   {
     question: "¿Qué tipo de roca es el mármol?",
     options: ["Ígnea", "Sedimentaria", "Metamórfica", "Evaporítica"],
-    correct: 2,
+    correct: 3,
   },
   {
     question:
       "¿Qué fenómeno natural ocurre cuando la energía almacenada en la Tierra se libera repentinamente?",
     options: ["Huracán", "Terremoto", "Tsunami", "Tornado"],
-    correct: 1,
+    correct: 2,
   },
   {
     question: "¿Cómo se llaman las capas visibles en una roca sedimentaria?",
     options: ["Granos", "Bandas", "Estratos", "Pliegues"],
-    correct: 2,
+    correct: 3,
   },
   {
     question: "¿Qué es un volcán inactivo?",
@@ -118,7 +123,7 @@ const questions = [
       "Un volcán en erupción constante",
       "Un volcán sumergido en el océano",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question: "¿Qué son las placas tectónicas?",
@@ -128,13 +133,13 @@ const questions = [
       "Fragmentos de cometas que caen a la Tierra",
       "Montañas formadas por el viento",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
       "¿Qué gas es el principal responsable de la formación de ácido en la lluvia ácida?",
     options: ["Oxígeno", "Dióxido de carbono", "Dióxido de azufre", "Metano"],
-    correct: 2,
+    correct: 3,
   },
   {
     question:

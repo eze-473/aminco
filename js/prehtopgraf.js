@@ -169,7 +169,7 @@ const questions = [
       "Un terreno muy empinado",
       "Un área con mucha vegetación",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es la planimetría?",
@@ -179,7 +179,7 @@ const questions = [
       "La representación de las características horizontales de la superficie terrestre en un mapa",
       "La medición de la profundidad del océano",
     ],
-    correct: 2,
+    correct: 3,
   },
   {
     question: "¿Qué es una sección transversal en topografía?",

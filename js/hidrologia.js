@@ -7,13 +7,13 @@ const questions = [
       "El estudio de los minerales subterráneos",
       "El estudio de la atmósfera",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
       "¿Cómo se llama el proceso por el cual el agua de lluvia se infiltra en el suelo?",
     options: ["Sublimación", "Filtración", "Infiltración", "Transpiración"],
-    correct: 2,
+    correct: 3,
   },
   {
     question:
@@ -24,7 +24,7 @@ const questions = [
       "La energía geotérmica",
       "La rotación de la Tierra",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question: "¿Qué es el ciclo hidrológico?",
@@ -44,13 +44,13 @@ const questions = [
       "Hundimiento del suelo",
       "Crecimiento de glaciares",
     ],
-    correct: 2,
+    correct: 3,
   },
   {
     question:
       "¿Qué término describe el movimiento lento de agua a través de la tierra hacia cuerpos de agua como ríos y lagos?",
     options: ["Filtración", "Escorrentía", "Flujo base", "Precipitación"],
-    correct: 2,
+    correct: 3,
   },
   {
     question:
@@ -61,7 +61,7 @@ const questions = [
       "Perforación de aire comprimido",
       "Perforación manual",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question: "¿Qué es un pozo de monitoreo en la minería?",
@@ -71,7 +71,7 @@ const questions = [
       "Un pozo utilizado para la ventilación",
       "Un pozo de emergencia",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
@@ -93,7 +93,7 @@ const questions = [
       "Aire comprimido",
       "Cables de acero",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question: "¿Qué es la hidrología minera?",
@@ -103,7 +103,7 @@ const questions = [
       "La gestión de ríos para el transporte de minerales",
       "El proceso de extracción de agua subterránea para uso minero",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
@@ -114,7 +114,7 @@ const questions = [
       "Para reducir el costo de las operaciones mineras",
       "Para promover el crecimiento de vegetación local",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question: "¿Qué es el drenaje ácido de minas (DAM)?",
@@ -124,7 +124,7 @@ const questions = [
       "Un método para limpiar aguas subterráneas",
       "El proceso de utilizar ácido para disolver metales en minería",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
@@ -135,7 +135,7 @@ const questions = [
       "Decide la ubicación de las oficinas",
       "Define los salarios de los trabajadores",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question: "¿Qué técnica se utiliza para tratar el drenaje ácido de minas?",
@@ -145,7 +145,7 @@ const questions = [
       "Extracción del ácido para su venta",
       "Congelación del agua contaminada",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
@@ -156,7 +156,7 @@ const questions = [
       "Un pozo de desagüe",
       "Un pozo para almacenar minerales extraídos",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
@@ -167,7 +167,7 @@ const questions = [
       "Permitir que los residuos se filtren libremente en los cuerpos de agua",
       "Utilizar agua contaminada en la agricultura",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
@@ -178,7 +178,7 @@ const questions = [
       "Para aumentar la cantidad de mineral extraído",
       "Para mantener la temperatura de la mina estable",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
@@ -189,7 +189,7 @@ const questions = [
       "El aumento de la biodiversidad acuática",
       "La mejora de la calidad del agua potable",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
@@ -200,7 +200,7 @@ const questions = [
       "Almacenar litio antes de su procesamiento",
       "Facilitar la ventilación de las instalaciones mineras",
     ],
-    correct: 1,
+    correct: 2,
   },
 ];
 
