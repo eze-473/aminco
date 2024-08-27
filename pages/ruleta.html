@@ -12,14 +12,14 @@
             margin-right: 20px;
         }
         nav {
-            width: 90%;
+            width: 40%;
             background-color: #1e2d3d;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 50px;
-            min-height: 100vh; /* Asegura que el nav ocupe al menos el 100% de la altura de la ventana */
-            margin-inline-end: 100px; /* Añade margen al final del main */
+            min-height: 80vh; /* Asegura que el nav ocupe al menos el 100% de la altura de la ventana */
+            margin-inline-end: 203px; /* Añade margen al final del main */
         }
         .nav {
             width: 100%;
@@ -52,8 +52,8 @@
             background-position: center;
         }
         #ruleta {
-            width: 300px;
-            height: 300px;
+            width: 500px;
+            height: 500px;
             border-radius: 50%;
             position: relative;
             overflow: hidden;
@@ -84,21 +84,68 @@
             border-bottom: 30px solid rgb(0, 0, 0);
             position: absolute;
             top: 310px;
-            left: 76%;
-            transform: translateX(-89%) rotate(90deg); /* Gira la flecha 90 grados a la derecha */
+            left: 71%;
+            transform: translateX(-71%) rotate(90deg); /* Gira la flecha 90 grados a la derecha */
         }
         .highlight {
             border: 3px solid rgb(0, 4, 255);
         }
-        .imagen-ruleta {
-            position: absolute;
-            top: 30%;
-            left: 55%;
-            transform: translate(-40%, -40%);
-            height: 40%;
-            width: 40%;
-            object-fit: cover;
-        }
+        .imagen-ruleta-1 {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-40%, -40%) rotate(19deg); /* Rotar 45 grados */
+    height: 40%;
+    width: 40%;
+    object-fit: cover;
+}
+
+.imagen-ruleta-2 {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-40%, -40%) rotate(-45deg); /* Rotar 90 grados */
+    height: 44%;
+    width: 44%;
+    object-fit: cover;
+}
+
+.imagen-ruleta-3 {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-40%, -40%) rotate(-106deg); /* Rotar 135 grados */
+    height: 40%;
+    width: 40%;
+    object-fit: cover;
+}
+.imagen-ruleta-4 {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-40%, -40%) rotate(-159deg); /* Rotar 135 grados */
+    height: 40%;
+    width: 40%;
+    object-fit: cover;
+}
+.imagen-ruleta-5 {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-40%, -40%) rotate(135deg); /* Rotar 135 grados */
+    height: 40%;
+    width: 40%;
+    object-fit: cover;
+}
+.imagen-ruleta-6 {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-40%, -40%) rotate(71deg); /* Rotar 135 grados */
+    height: 40%;
+    width: 40%;
+    object-fit: cover;
+}
         main {
            padding-right: 200px; /* Añade padding a la derecha */
         }
@@ -159,15 +206,15 @@
         const secciones = [];
 
         imagenes.forEach((imagen, index) => {
-            const seccion = document.createElement('div');
-            seccion.className = 'seccion';
-            seccion.style.setProperty('--angulo', `${angulo}deg`);
-            seccion.style.transform = `rotate(${index * angulo}deg) skewY(calc(-90deg + ${angulo}deg))`;
-            seccion.style.backgroundColor = `hsl(${index * angulo}, 10%, 100%)`;
-            seccion.innerHTML = `<img src="${imagen}" alt="Imagen ${index + 1}" class="imagen-ruleta">`;
-            ruleta.appendChild(seccion);
-            secciones.push(seccion);
-        });
+    const seccion = document.createElement('div');
+    seccion.className = 'seccion';
+    seccion.style.setProperty('--angulo', `${angulo}deg`);
+    seccion.style.transform = `rotate(${index * angulo}deg) skewY(calc(-90deg + ${angulo}deg))`;
+    seccion.style.backgroundColor = `hsl(${index * angulo}, 10%, 100%)`;
+    seccion.innerHTML = `<img src="${imagen}" alt="Imagen ${index + 1}" class="imagen-ruleta imagen-ruleta-${index + 1}">`;
+    ruleta.appendChild(seccion);
+    secciones.push(seccion);
+});
     
         ruleta.onclick = () => {
            const randomIndex = Math.floor(Math.random() * enlaces.length);
