@@ -92,7 +92,7 @@ const questions = [
     {
         question: "¿Qué es la minería de roca dura en el contexto del oro?",
         options: [" Extracción de oro de depósitos aluviales", "Minería en el fondo del mar", "Minería en la que el oro se extrae de rocas sólidas ", "Extracción de oro mediante lixiviación en pilas"],
-        correct: 1
+        correct: 3
     },
     {
         question: "¿Por qué el litio es un recurso estratégico en la transición energética global?",

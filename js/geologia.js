@@ -13,7 +13,7 @@ const questions = [
   {
     question: "¿Cuál es el nombre de la capa más externa de la Tierra?",
     options: ["Núcleo", "Manto", "Corteza", "Astenosfera"],
-    correct: 2,
+    correct: 3,
   },
   {
     question: "¿Qué tipo de roca se forma a partir de lava o magma?",
