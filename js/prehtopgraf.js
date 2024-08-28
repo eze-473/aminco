@@ -7,7 +7,7 @@ const questions = [
       "El estudio de los animales",
       " El estudio del clima",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué representa una línea de contorno en un mapa topográfico?",
@@ -17,13 +17,13 @@ const questions = [
       " Un cambio en la elevación del terreno",
       "La profundidad de un río",
     ],
-    correct: 3,
+    correct: 2,
   },
   {
     question:
       "¿Cómo se llama el punto más alto en un área específica en un mapa topográfico?",
     options: ["Valle", "Pico o cima ", "Meseta", "Cuenca"],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -34,13 +34,13 @@ const questions = [
       "Un río sinuoso",
       "Un área plana",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
       "¿Qué herramienta se utiliza comúnmente en topografía para medir ángulos horizontales y verticales?",
     options: ["Nivel de burbuja", "Cinta métrica ", "Teodolito ", "Compás"],
-    correct: 3,
+    correct: 2,
   },
   {
     question:
@@ -51,7 +51,7 @@ const questions = [
       " El área es un desierto ",
       "El terreno es bajo",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es un perfil topográfico?",
@@ -61,7 +61,7 @@ const questions = [
       "Una imagen aérea ",
       "Un mapa del clima",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es un punto de control en topografía?",
@@ -71,7 +71,7 @@ const questions = [
       "Un cruce de caminos ",
       "Una montaña",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Cuál es la función principal de un GPS en topografía?",
@@ -81,7 +81,7 @@ const questions = [
       "Tomar fotografías del terreno",
       "Predecir el clima",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué representa la escala en un mapa topográfico?",
@@ -91,7 +91,7 @@ const questions = [
       "La temperatura del área",
       "El tipo de vegetación",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es un levantamiento topográfico?",
@@ -101,7 +101,7 @@ const questions = [
       "Un tipo de mapa meteorológico",
       "La creación de un jardín",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué indica un relieve suave en un mapa topográfico?",
@@ -111,13 +111,13 @@ const questions = [
       "Ríos profundos",
       "Volcanes",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
       "¿Qué herramienta se utiliza para nivelar un terreno durante un levantamiento topográfico?",
     options: ["Regla", "Nivel de burbuja", "Péndulo", "Termómetro"],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es un mapa topográfico?",
@@ -127,7 +127,7 @@ const questions = [
       "Un mapa político",
       "Un mapa de zonas climáticas",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es la altitud?",
@@ -137,7 +137,7 @@ const questions = [
       "La profundidad de un lago",
       "La longitud de un río",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es un punto de elevación en topografía?",
@@ -147,7 +147,7 @@ const questions = [
       "Un área de poca elevación",
       "Un pozo de agua",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -158,7 +158,7 @@ const questions = [
       "Un equipo de jardinería",
       "Una cámara",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -169,7 +169,7 @@ const questions = [
       "Un terreno muy empinado",
       "Un área con mucha vegetación",
     ],
-    correct: 1,
+    correct: 0,
   },
   {
     question: "¿Qué es la planimetría?",
@@ -179,7 +179,7 @@ const questions = [
       "La representación de las características horizontales de la superficie terrestre en un mapa",
       "La medición de la profundidad del océano",
     ],
-    correct: 3,
+    correct: 2,
   },
   {
     question: "¿Qué es una sección transversal en topografía?",
@@ -189,7 +189,7 @@ const questions = [
       "Un mapa de carreteras",
       "Un diagrama del clima",
     ],
-    correct: 2,
+    correct: 1,
   },
 ];
 

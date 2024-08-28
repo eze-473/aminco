@@ -7,7 +7,7 @@ const questions = [
             "Aumentar las ganancias sin considerar el medio ambiente",
             "Explorar nuevas áreas sin estudios ambientales"
         ],
-        correct: 2
+        correct: 1
     },
     {
         question: "¿Qué medida deben tomar las empresas mineras para minimizar la contaminación del agua?",
@@ -17,7 +17,7 @@ const questions = [
             "Utilizar más químicos en la extracción de minerales",
             "Evitar la reforestación en las áreas cercanas"
         ],
-        correct: 2  
+        correct: 1  
     },
     {
         question: "¿Qué es la restauración ecológica en minería?",
@@ -27,7 +27,7 @@ const questions = [
             "Abandonar las minas después de la explotación",
             "Dejar los residuos en el sitio"
         ],
-        correct: 1
+        correct: 0
     },
     {
         question: "¿Cuál es el objetivo de un Estudio de Impacto Ambiental (EIA) en minería?",
@@ -37,7 +37,7 @@ const questions = [
             "Promover la deforestación para facilitar la minería",
             "Obtener permisos sin evaluar los efectos ambientales"
         ],
-        correct: 2
+        correct: 1
     },
     {
         question: "¿Qué debe hacer una empresa minera para manejar adecuadamente los residuos sólidos?",
@@ -47,7 +47,7 @@ const questions = [
             "Enterrarlos en cualquier lugar",
             "Tirarlos en cuerpos de agua cercanos"
         ],
-        correct: 1
+        correct: 0
     },
     {
         question: "¿Qué es la minería sostenible?",
@@ -57,7 +57,7 @@ const questions = [
             "Minería enfocada solo en maximizar los beneficios económicos",
             "Minería que no tiene en cuenta el medio ambiente"
         ],
-        correct: 1
+        correct: 0
     },
     {
         question: "¿Qué acción demuestra la responsabilidad ambiental corporativa de una empresa minera?",
@@ -67,7 +67,7 @@ const questions = [
             "Promover la reforestación después de la extracción",
             "Ignorar las preocupaciones ambientales"
         ],
-        correct: 3
+        correct: 2
     },
     {
         question: "¿Cómo pueden las empresas mineras prevenir la deforestación en sus operaciones?",
@@ -77,7 +77,7 @@ const questions = [
             "Desviando ríos para facilitar la minería",
             "Utilizando maquinaria pesada en todas las áreas"
         ],
-        correct: 1
+        correct: 0
     },
     {
         question: "¿Qué rol juega la transparencia en la responsabilidad ambiental de una empresa minera?",
@@ -87,7 +87,7 @@ const questions = [
             "Ocultar los informes ambientales",
             "Evitar las auditorías ambientales"
         ],
-        correct: 1
+        correct: 0
     },
     {
         question: "¿Qué es la minería con “cero residuos”?",
@@ -97,7 +97,7 @@ const questions = [
             "Minería que busca reducir al máximo la generación de residuos y reciclar todo lo posible",
             "Minería que no utiliza ningún tipo de energía"
         ],
-        correct: 3
+        correct: 2
     },
     {
         question: "¿Cómo pueden las empresas mineras reducir su huella de carbono?",
@@ -107,7 +107,7 @@ const questions = [
             "Utilizando energía proveniente de combustibles fósiles",
             "Implementando energías renovables y mejorando la eficiencia energética"
         ],
-        correct: 4
+        correct: 3
     },
     {
         question: "¿Qué importancia tiene la consulta previa con las comunidades en la minería?",
@@ -117,7 +117,7 @@ const questions = [
             "Es solo un trámite para obtener permisos",
             "Es una formalidad sin importancia"
         ],
-        correct: 2
+        correct: 1
     },
     {
         question: "¿Qué medida es fundamental para la protección de la biodiversidad en áreas mineras?",
@@ -127,7 +127,7 @@ const questions = [
             "Establecer y respetar zonas de conservación dentro y alrededor de las áreas mineras",
             "Usar pesticidas para controlar la vegetación"
         ],
-        correct: 3
+        correct: 2
     },
     {
         question: "¿Qué es la remediación ambiental en el contexto minero?",
@@ -137,7 +137,7 @@ const questions = [
             "Continuar la minería sin restauración",
             "Expandir las operaciones mineras sin control"
         ],
-        correct: 2
+        correct: 1
     },
     {
         question: "¿Por qué es importante la educación ambiental en la minería?",
@@ -147,7 +147,7 @@ const questions = [
             "Para concienciar a empleados y comunidades sobre la importancia de proteger el medio ambiente",
             "Para aumentar la velocidad de extracción"
         ],
-        correct: 3
+        correct: 2
     },
     {
         question: "¿Qué significa la certificación ambiental para una empresa minera?",
@@ -157,7 +157,7 @@ const questions = [
             "Una insignia para mejorar las ventas",
             "Un permiso para realizar cualquier tipo de operación minera"
         ],
-        correct: 1
+        correct: 0
     },
     {
         question: "Qué papel juegan los auditores ambientales en la minería?",
@@ -167,7 +167,7 @@ const questions = [
             "Aumentar la producción minera",
             "Evitar la supervisión de las operaciones mineras"
         ],
-        correct: 2
+        correct: 1
     },
     {
         question: "Qué es el Plan de Cierre de Minas?",
@@ -177,7 +177,7 @@ const questions = [
             " Un permiso para extender la vida útil de la mina",
             "Una estrategia para abrir nuevas áreas mineras"
         ],
-        correct: 2
+        correct: 1
     },
     {
         question: "¿Qué es el monitoreo ambiental en minería?",
@@ -187,7 +187,7 @@ const questions = [
             "Una forma de incrementar los costos operativos",
             "Una práctica solo necesaria en grandes minas"
         ],
-        correct: 2
+        correct: 1
     },
 
 ];
