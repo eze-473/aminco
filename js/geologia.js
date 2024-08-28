@@ -2,18 +2,18 @@ const questions = [
   {
     question: "¿Cuál es el mineral más duro conocido en la Tierra?",
     options: ["Oro", "Diamante", "Cuarzo", "Plata"],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
       "¿Cómo se llama el proceso por el cual las rocas se rompen en pedazos más pequeños por la acción del viento, agua o hielo?",
     options: ["Erosión", "Compactación", "Metamorfismo", "Solidificación"],
-    correct: 1,
+    correct: 0,
   },
   {
     question: "¿Cuál es el nombre de la capa más externa de la Tierra?",
     options: ["Núcleo", "Manto", "Corteza", "Astenosfera"],
-    correct: 3,
+    correct: 2,
   },
   {
     question: "¿Qué tipo de roca se forma a partir de lava o magma?",
@@ -23,13 +23,13 @@ const questions = [
       "Roca metamórfica",
       "Roca evaporítica",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
       "¿Cómo se llama el proceso por el cual el agua se infiltra en el suelo y llena los espacios vacíos?",
     options: ["Precipitación", "Infiltración", "Evaporación", "Condensación"],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -40,12 +40,12 @@ const questions = [
       "Roca metamórfica",
       "Roca volcánica",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Cuál de los siguientes es un ejemplo de un mineral?",
     options: ["Granito", "Basalto", "Cuarzo", "Arenisca"],
-    correct: 3,
+    correct: 2,
   },
   {
     question: "¿Qué es un fósil?",
@@ -55,7 +55,7 @@ const questions = [
       "Restos preservados de organismos antiguos",
       "Un tipo de roca",
     ],
-    correct: 3,
+    correct: 1,
   },
   {
     question: "¿Qué escala se utiliza para medir la dureza de los minerales?",
@@ -65,7 +65,7 @@ const questions = [
       "Escala de Mercalli",
       "Escala de Fahrenheit",
     ],
-    correct: 1,
+    correct: 0,
   },
   {
     question:
@@ -76,7 +76,7 @@ const questions = [
       "Roca metamórfica",
       "Roca volcánica",
     ],
-    correct: 3,
+    correct: 2,
   },
   {
     question:
@@ -87,33 +87,33 @@ const questions = [
       "Laurasia",
       "Rodinia",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Cómo se llama el proceso de formación de montañas?",
     options: ["Sedimentación", "Orogénesis", "Volcanismo", "Meteorización"],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Cuál es la roca más abundante en la corteza terrestre?",
     options: ["Granito", "Mármol", "Basalto", "Caliza"],
-    correct: 1,
+    correct: 0,
   },
   {
     question: "¿Qué tipo de roca es el mármol?",
     options: ["Ígnea", "Sedimentaria", "Metamórfica", "Evaporítica"],
-    correct: 3,
+    correct: 2,
   },
   {
     question:
       "¿Qué fenómeno natural ocurre cuando la energía almacenada en la Tierra se libera repentinamente?",
     options: ["Huracán", "Terremoto", "Tsunami", "Tornado"],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Cómo se llaman las capas visibles en una roca sedimentaria?",
     options: ["Granos", "Bandas", "Estratos", "Pliegues"],
-    correct: 3,
+    correct: 2,
   },
   {
     question: "¿Qué es un volcán inactivo?",
@@ -123,7 +123,7 @@ const questions = [
       "Un volcán en erupción constante",
       "Un volcán sumergido en el océano",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué son las placas tectónicas?",
@@ -133,19 +133,19 @@ const questions = [
       "Fragmentos de cometas que caen a la Tierra",
       "Montañas formadas por el viento",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
       "¿Qué gas es el principal responsable de la formación de ácido en la lluvia ácida?",
     options: ["Oxígeno", "Dióxido de carbono", "Dióxido de azufre", "Metano"],
-    correct: 3,
+    correct: 2,
   },
   {
     question:
       "¿Cómo se llama la roca que se forma cuando la lava se enfría y solidifica rápidamente?",
     options: ["Granito", "Obsidiana ", "Pizarra", "Arenisca"],
-    correct: 2,
+    correct: 1,
   },
 ];
 

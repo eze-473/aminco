@@ -7,13 +7,13 @@ const questions = [
       "El estudio de los minerales subterráneos",
       "El estudio de la atmósfera",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
       "¿Cómo se llama el proceso por el cual el agua de lluvia se infiltra en el suelo?",
     options: ["Sublimación", "Filtración", "Infiltración", "Transpiración"],
-    correct: 3,
+    correct: 2,
   },
   {
     question:
@@ -24,7 +24,7 @@ const questions = [
       "La energía geotérmica",
       "La rotación de la Tierra",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es el ciclo hidrológico?",
@@ -34,7 +34,7 @@ const questions = [
       "El cambio de estaciones",
       "El movimiento del agua en la Tierra, desde la atmósfera hasta la superficie y de nuevo a la atmósfera"
     ],
-    correct: 4,
+    correct: 3,
   },
   {
     question: "¿Qué fenómeno puede ocurrir si un acuífero se sobreexplota?",
@@ -44,13 +44,13 @@ const questions = [
       "Hundimiento del suelo",
       "Crecimiento de glaciares",
     ],
-    correct: 3,
+    correct: 2,
   },
   {
     question:
       "¿Qué término describe el movimiento lento de agua a través de la tierra hacia cuerpos de agua como ríos y lagos?",
     options: ["Filtración", "Escorrentía", "Flujo base", "Precipitación"],
-    correct: 3,
+    correct: 2,
   },
   {
     question:
@@ -61,7 +61,7 @@ const questions = [
       "Perforación de aire comprimido",
       "Perforación manual",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es un pozo de monitoreo en la minería?",
@@ -71,7 +71,7 @@ const questions = [
       "Un pozo utilizado para la ventilación",
       "Un pozo de emergencia",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -82,7 +82,7 @@ const questions = [
       "La perforación de túnel requiere menos equipo",
       "La perforación de pozo se realiza verticalmente, mientras que la perforación de túnel es horizontal"
     ],
-    correct: 4,
+    correct: 3,
   },
   {
     question:
@@ -93,7 +93,7 @@ const questions = [
       "Aire comprimido",
       "Cables de acero",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es la hidrología minera?",
@@ -103,7 +103,7 @@ const questions = [
       "La gestión de ríos para el transporte de minerales",
       "El proceso de extracción de agua subterránea para uso minero",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -114,7 +114,7 @@ const questions = [
       "Para reducir el costo de las operaciones mineras",
       "Para promover el crecimiento de vegetación local",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es el drenaje ácido de minas (DAM)?",
@@ -124,7 +124,7 @@ const questions = [
       "Un método para limpiar aguas subterráneas",
       "El proceso de utilizar ácido para disolver metales en minería",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -135,7 +135,7 @@ const questions = [
       "Decide la ubicación de las oficinas",
       "Define los salarios de los trabajadores",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué técnica se utiliza para tratar el drenaje ácido de minas?",
@@ -145,7 +145,7 @@ const questions = [
       "Extracción del ácido para su venta",
       "Congelación del agua contaminada",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -156,7 +156,7 @@ const questions = [
       "Un pozo de desagüe",
       "Un pozo para almacenar minerales extraídos",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -167,7 +167,7 @@ const questions = [
       "Permitir que los residuos se filtren libremente en los cuerpos de agua",
       "Utilizar agua contaminada en la agricultura",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -178,7 +178,7 @@ const questions = [
       "Para aumentar la cantidad de mineral extraído",
       "Para mantener la temperatura de la mina estable",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -189,7 +189,7 @@ const questions = [
       "El aumento de la biodiversidad acuática",
       "La mejora de la calidad del agua potable",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -200,7 +200,7 @@ const questions = [
       "Almacenar litio antes de su procesamiento",
       "Facilitar la ventilación de las instalaciones mineras",
     ],
-    correct: 2,
+    correct: 1,
   },
 ];
 

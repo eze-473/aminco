@@ -8,7 +8,7 @@ const questions = [
       "La maximización de las ganancias a cualquier costo",
       "La expansión de operaciones sin importar el impacto ambiental",
     ],
-    correct: 1,
+    correct: 0,
   },
   {
     question:
@@ -19,7 +19,7 @@ const questions = [
       "Desalojar comunidades sin compensación",
       "No cumplir con las normativas ambientales",
     ],
-    correct: 1,
+    correct: 0,
   },
   {
     question:
@@ -30,7 +30,7 @@ const questions = [
       "Para reducir los costos de producción",
       "Para aumentar la extracción de minerales",
     ],
-    correct: 1,
+    correct: 0,
   },
   {
     question: "¿Qué es la minería responsable?",
@@ -40,7 +40,7 @@ const questions = [
       "Minería sin regulaciones",
       "Minería que maximiza las ganancias",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es un estudio de impacto ambiental (EIA) en minería?",
@@ -50,7 +50,7 @@ const questions = [
       "Un informe sobre la cantidad de minerales en la mina",
       "Una predicción de los precios futuros de los minerales",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -61,7 +61,7 @@ const questions = [
       "La adquisición de tierras para la minería",
       "La compra de maquinaria minera",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -72,7 +72,7 @@ const questions = [
       "Expandir operaciones sin considerar el impacto ambiental",
       "Ignorar las regulaciones ambientales",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es el desarrollo sostenible en el contexto de la minería?",
@@ -82,7 +82,7 @@ const questions = [
       "La minimización de costos sin importar el impacto ambiental",
       "La producción en masa sin responsabilidad social",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -93,7 +93,7 @@ const questions = [
       "Descuidar la salud y seguridad de los empleados",
       "Operar sin cumplir con las leyes ambientales",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Por qué es importante la transparencia en la industria minera?",
@@ -103,7 +103,7 @@ const questions = [
       "Para ocultar los impactos ambientales",
       "Para acelerar el proceso de extracción",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es la gestión de residuos en la minería?",
@@ -113,7 +113,7 @@ const questions = [
       "La quema de residuos a cielo abierto",
       "El vertido de residuos en cuerpos de agua",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -124,7 +124,7 @@ const questions = [
       "Ignorar las necesidades de la comunidad",
       "Extraer recursos sin aportar a la economía local",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -135,7 +135,7 @@ const questions = [
       "La minería completamente automatizada",
       "La minería que no requiere permisos",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -146,7 +146,7 @@ const questions = [
       "Expandir operaciones sin consideración del medio ambiente",
       "Reducir los costos operativos a costa del medio ambiente",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Cómo pueden las empresas mineras contribuir a la conservación de la biodiversidad?",
@@ -156,7 +156,7 @@ const questions = [
       "Expandiendo las operaciones mineras en áreas protegidas",
       "Desviando cursos de agua sin plan de mitigación",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Por qué es fundamental el diálogo con las comunidades indígenas en proyectos mineros?",
@@ -166,7 +166,7 @@ const questions = [
       "Para evitar el pago de regalías",
       "Para acelerar la extracción de recursos",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -177,7 +177,7 @@ const questions = [
       "Minería realizada sin regulaciones",
       "Minería que excluye a los grupos minoritarios",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -188,7 +188,7 @@ const questions = [
       "Evitar cualquier tipo de uso del agua",
       "Contaminar fuentes de agua sin tratamiento",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "¿Qué es la remediación en el contexto de la minería?",
@@ -198,7 +198,7 @@ const questions = [
       "La ampliación de la zona minera",
       "La extracción continua sin control",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question:
@@ -209,7 +209,7 @@ const questions = [
       "Maximizar la producción sin considerar el medio ambiente",
       "Ignorar las normativas locales y globales",
     ],
-    correct: 2,
+    correct: 1,
   },
 ];
 
