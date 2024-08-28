@@ -139,6 +139,8 @@ function adivinarLetra() {
             imageWidth: 400,
             imageHeight: 200,
             imageAlt: 'Imagen de victoria',
+        }).then(() => {
+            window.location.href = "../index.html"; // Redirige a la página de victoria
         });
     }  else if (errores >= 7) { // Una vida más
         Swal.fire({
@@ -148,8 +150,11 @@ function adivinarLetra() {
             imageWidth: 400,
             imageHeight: 200,
             imageAlt: 'Imagen de pérdida',
+        }).then(() => {
+            window.location.href = "../index.html"; // Redirige a la página de derrota
         });
     }
-}
+    }
+
 actualizarPalabra();
 dibujarAhorcado();
