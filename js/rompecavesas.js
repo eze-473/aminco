@@ -73,15 +73,6 @@ function touchEnd(event) {
     checkWin();
 }
 
-function checkWin() {
-    const currentOrder = Array.from(puzzle.children).map(piece => parseInt(piece.dataset.index));
-    const correctOrder = Array.from({ length: 16 }, (_, i) => i);
-    if (currentOrder.every((pos, index) => pos === correctOrder[index])) {
-        clearInterval(timer);
-        alert('¡Ganaste!');
-    }
-}
-
 
 // Agregar cronómetro de 90 segundos
 let timeLeft = 90;
@@ -144,12 +135,46 @@ document.body.appendChild(messageDiv);
 
 
 // Modificar la función checkWin para mostrar el mensaje de victoria
-function checkWin() {
-const currentOrder = Array.from(puzzle.children).map(piece => parseInt(piece.dataset.index));
-const correctOrder = Array.from({ length: 16 }, (_, i) => i);
-if (currentOrder.every((pos, index) => pos === correctOrder[index])) {
-    clearInterval(timer);
-    showWinMessage('¡Ganaste!');
+function showAlertAndRedirect() {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'alert';
+    alertDiv.style.position = 'fixed';
+    alertDiv.style.top = '50%';
+    alertDiv.style.left = '50%';
+    alertDiv.style.transform = 'translate(-50%, -50%)';
+    alertDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    alertDiv.style.color = 'white';
+    alertDiv.style.padding = '20px';
+    alertDiv.style.borderRadius = '10px';
+    alertDiv.style.textAlign = 'center';
+
+    const alertImg = document.createElement('img');
+    alertImg.src = '"../img/PANTALLA GANASTE.jpg"'; // Reemplaza con la ruta de tu imagen
+    alertImg.style.width = '200px'; // Ajustar el tamaño de la imagen
+    alertImg.style.height = '200px'; // Ajustar el tamaño de la imagen
+    alertDiv.appendChild(alertImg);
+
+    const alertText = document.createElement('p');
+    alertText.textContent = '¡Has ganado!';
+    alertText.style.marginTop = '10px';
+    alertDiv.appendChild(alertText);
+
+    document.body.appendChild(alertDiv);
+
+    setTimeout(() => {
+        window.location.href = '../index.html'; // Reemplaza con la URL de la página a la que quieres redirigir
+    }, 3000); // Espera 3 segundos antes de redirigir
 }
 
+function countdown() {
+    if (timeLeft > 0) {
+        timeLeft--;
+        drawTimer();
+        setTimeout(countdown, 1000);
+    } else {
+        showAlertAndRedirect();
+    }
 }
+
+drawTimer();
+countdown();
